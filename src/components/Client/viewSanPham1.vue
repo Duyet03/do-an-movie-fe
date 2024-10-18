@@ -1,60 +1,4 @@
 <template>
-    <div style="height: 100px;background-color: white;border-bottom: 3px solid olivedrab;" class="text-center">
-        <img style="height: 97px"
-            src="https://media.lottecinemavn.com/Media/WebAdmin/ccc95ee5b9274a12ba3e51317250dcbe.png" alt="" />
-    </div>
-    <div class="nav primary-menu " style=" height: 40px">
-        <nav class="navbar navbar-expand-xl w-100 ">
-            <ul class="navbar-nav justify-content-center flex-grow-1 gap-1">
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">
-                                SHOP QUÀ TẶNG
-                            </div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">MUA VÉ</div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">PHIM</div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">
-                                RẠP CHIẾU PHIM
-                            </div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">KHUYẾN MÃI</div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">LIÊN HỆ</div>
-                        </a>
-                    </router-link>
-                </li>
-            </ul>
-        </nav>
-    </div>
     <template v-for="(value, index) in list_phim" :key="index">
         <div style="margin-top: 20px;">
             <div class="row ">
@@ -88,8 +32,7 @@
                 <div class="col-lg-1 mt-2 mb-2"></div>
             </div>
         </div>
-        <div class="container">
-            
+        <div class="container">      
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
