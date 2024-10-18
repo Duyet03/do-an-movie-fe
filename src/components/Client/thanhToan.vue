@@ -1,235 +1,109 @@
 <template>
-<div style="height: 100px;background-color: white;border-bottom: 3px solid olivedrab;" class="text-center">
-        <img style="height: 97px"
-            src="https://media.lottecinemavn.com/Media/WebAdmin/ccc95ee5b9274a12ba3e51317250dcbe.png" alt="" />
-    </div>
-    <div class="nav primary-menu" style=" height: 40px">
-        <nav class="navbar navbar-expand-xl w-100">
-            <ul class="navbar-nav justify-content-center flex-grow-1 gap-1">
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">
-                                SHOP QUÀ TẶNG
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-5 col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>How would you like to pay?</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body"><img class="img-fluid"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1v7T287-ikP1m7dEUbs2n1SbbLEqkMd1ZA&s"
+                                            alt=""></div>
+                                </div>
                             </div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">MUA VÉ</div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">PHIM</div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">
-                                RẠP CHIẾU PHIM
+                            <div class="col-lg-4 ">
+                                <div class="card">
+                                    <div class="card-bod">
+                                        <img class="img-fluid" style=""
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnV4cUM7jBauINof35Yn_unOz976Iz5okV8A&s"
+                                            alt="">
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">KHUYẾN MÃI</div>
-                        </a>
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link to="/page1">
-                        <a class="nav-link" href="/page1">
-                            <div class="menu-title" style="font-size: 20px">LIÊN HỆ</div>
-                        </a>
-                    </router-link>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div style="margin-top: 20px;">
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/c11aacf2c3b4446ba86c96e9e9be5b61.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/544c1477d2f0455dbb3f743075eafb8b.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/4e520019a0dc46969fb348d80d405a9c.jpg"
-                        class="d-block w-100" alt="..." />
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-bod">
+                                        <img class="img-fluid" style=""
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxsoe7iPccCnGraliGFCLCvbg3bO3PDtELQ&s"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <template v-for="(value, index) in list_phim" :key="index">
+                <div class="col-lg-7 col-md-12">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h3>Thanh Toán</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h4>
+                                        <p>Phim</p>
+                                    </h4>
+                                    <h4>
+                                        <p>Ghế h4,h5</p>
+                                    </h4>
+                                    <h4>
+                                        <p class="text-nowrap">Dịch vụ ghế đôi</p>
+                                    </h4>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h4>
+                                        <p>:</p>
+                                    </h4>
+                                    <h4>
+                                        <p>:</p>
+                                    </h4>
+                                    <h4>
+                                        <p>:</p>
+                                    </h4>
+                                </div>
+                                <div class="col-lg-6  mb-5">
+                                    <h4>
+                                        <p class="text-nowrap">{{ value.name }}</p>
+                                    </h4>
+                                    <h4>
+                                        <p>160.000đ</p>
+                                    </h4>
+                                    <h4>
+                                        <p>120.000đ</p>
+                                    </h4>
+                                </div>
+                                <hr>
+                                <div class="col-lg-4">
+                                    <h4>
+                                        <p>Tổng</p>
+                                    </h4>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h4>
+                                        <p>:</p>
+                                    </h4>
+                                </div>
+                                <div class="col-lg-6 text-end">
+                                    <h4>
+                                        <p>280.000đ</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button class="btn btn-primary">Thanh toán</button>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </div>
     </div>
-<div class="container mt-5">
-       <div class="row">
-           <div class="col-lg-5 col-md-12">
-               <div class="card">
-                   <div class="card-header">
-                       <h3>How would you like to pay?</h3>
-                   </div>
-                   <div class="card-body">
-                       <div class="row">
-                           <div class="col-lg-4">
-                               <div class="card">
-                                   <div class="card-body"><img class="img-fluid"
-                                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1v7T287-ikP1m7dEUbs2n1SbbLEqkMd1ZA&s"
-                                           alt=""></div>
-                               </div>
-                           </div>
-                           <div class="col-lg-4 ">
-                               <div class="card">
-                                   <div class="card-bod">
-                                       <img class="img-fluid" style=""
-                                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnV4cUM7jBauINof35Yn_unOz976Iz5okV8A&s"
-                                           alt="">
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col-lg-4">
-                               <div class="card">
-                                   <div class="card-bod">
-                                       <img class="img-fluid" style=""
-                                           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxsoe7iPccCnGraliGFCLCvbg3bO3PDtELQ&s"
-                                           alt="">
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <template v-for="(value,index) in list_phim" :key="index">
-            <div class="col-lg-7 col-md-12">
-               <div class="card">
-                   <div class="card-header text-center">
-                       <h3>Thanh Toán</h3>
-                   </div>
-                   <div class="card-body">
-                       <div class="row">
-                           <div class="col-lg-4">
-                               <h4>
-                                   <p>Phim</p>
-                               </h4>
-                               <h4>
-                                   <p>Ghế h4,h5</p>
-                               </h4>
-                               <h4>
-                                   <p class="text-nowrap">Dịch vụ ghế đôi</p>
-                               </h4>
-                           </div>
-                           <div class="col-lg-2">
-                               <h4>
-                                   <p>:</p>
-                               </h4>
-                               <h4>
-                                   <p>:</p>
-                               </h4>
-                               <h4>
-                                   <p>:</p>
-                               </h4>
-                           </div>
-                           <div class="col-lg-6  mb-5">
-                               <h4>
-                                   <p class="text-nowrap">{{value.name}}</p>
-                               </h4>
-                               <h4>
-                                   <p>160.000đ</p>
-                               </h4>
-                               <h4>
-                                   <p>120.000đ</p>
-                               </h4>
-                           </div>
-                           <hr>
-                           <div class="col-lg-4">
-                               <h4>
-                                   <p>Tổng</p>
-                               </h4>
-                           </div>
-                           <div class="col-lg-2">
-                               <h4>
-                                   <p>:</p>
-                               </h4>
-                           </div>
-                           <div class="col-lg-6 text-end">
-                               <h4>
-                                   <p>280.000đ</p>
-                               </h4>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="card-footer text-end">
-                       <button class="btn btn-primary">Thanh toán</button>
-                   </div>
-               </div>
-           </div>
-           </template>
-       </div>
-        <div class="footer " style="background-color: w;">
-            <img style="height: 70px;width: 500px;" alt="Lotte Cinema Logo"
-                src="https://media.lottecinemavn.com/Media/WebAdmin/ccc95ee5b9274a12ba3e51317250dcbe.png" />
-            <p>
-                <a href="#">
-                    Chính Sách Khách Hàng Thường Xuyên
-                </a>
-                |
-                <a href="#">
-                    Chính Sách Bảo Mật Thông Tin
-                </a>
-                |
-                <a href="#">
-                    Điều Khoản Sử Dụng
-                </a>
-            </p>
-            <p>
-                CÔNG TY TNHH LOTTE CINEMA VIỆT NAM
-            </p>
-            <p>
-                Giấy CNĐKDN: 0302575928, đăng ký lần đầu ngày 02/05/2008, đăng ký thay đổi lần thứ 10 ngày
-                30/03/2018, cấp
-                bởi Sở KHĐT Thành phố Hồ Chí Minh
-            </p>
-            <p>
-                Địa chỉ: Tầng 3, TTTM Lotte, số 469 đường Nguyễn Hữu Thọ, Phường Tân Hưng, Quận 7, TPHCM, Việt Nam
-            </p>
-            <p>
-                Hotline: (028) 3775 2524
-            </p>
-            <p>
-                COPYRIGHT @ LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
-            </p>
-        </div>
-   </div>
 
 </template>
 <script>
@@ -263,9 +137,9 @@ export default {
                     thoi_gian: "111 phút",
                     loai: "2D | Normal | Normal sound | Phụ đề",
                     tom_tat: "Ba năm sau cái chết của Yam, Yak vẫn tiếp tục săn lùng linh hồn bí ẩn mặc áo choàng đen. Gặp một cô gái có triệu chứng giống Yam, Yak phát hiện ra người bảo vệ linh hồn, pháp sư ẩn dật Puang, sống trong một khu rừng đầy nguy hiểm. Giữa những phép thuật ma quỷ và những sinh vật nguy hiểm. Khi họ đuổi theo linh hồn mặc áo choàng đen, tiếng kêu đầy ám ảnh của Tee Yod sắp quay trở lại một lần nữa...",
-                    danh_gia1 : "Quỷ Ăn Tạng thực sự là một bộ phim kinh dị độc đáo, mang đến cảm giác ghê rợn và căng thẳng từ đầu đến cuối. Hiệu ứng hình ảnh đáng kinh ngạc và cách xây dựng không khí bí ẩn khiến tôi bị cuốn hút ngay từ những phút đầu tiên. Phim có sự kết hợp tuyệt vời giữa yếu tố tâm linh và máu me, tạo nên trải nghiệm khó quên. Nếu bạn là fan của thể loại kinh dị, đây chắc chắn là một tác phẩm không thể bỏ qua!", 
-                    danh_gia2 : "Điều ấn tượng nhất trong Quỷ Ăn Tạng chính là diễn xuất tuyệt vời của dàn diễn viên. Nhân vật chính truyền tải một cảm giác sợ hãi chân thực, giúp khán giả cảm nhận được nỗi khiếp sợ mà họ đang đối mặt. Cốt truyện độc đáo và bất ngờ đã giữ tôi ngồi im lặng suốt thời gian phim. Đây là một bộ phim kinh dị với nội dung sâu sắc, vượt xa những cảnh hù dọa thông thường.",              
-                    danh_gia3 : "Quỷ Ăn Tạng không chỉ đơn thuần là một bộ phim về máu me, mà còn là một tác phẩm nghệ thuật đầy sáng tạo. Bối cảnh phim tối tăm và âm thanh rùng rợn đã góp phần xây dựng nên bầu không khí đáng sợ đến nghẹt thở. Từng chi tiết nhỏ trong phim đều được chăm chút kỹ lưỡng, từ đạo cụ đến các cảnh quay, khiến tôi không thể rời mắt khỏi màn hình. Phim này chắc chắn sẽ ám ảnh tôi trong nhiều ngày tới!",                
+                    danh_gia1: "Quỷ Ăn Tạng thực sự là một bộ phim kinh dị độc đáo, mang đến cảm giác ghê rợn và căng thẳng từ đầu đến cuối. Hiệu ứng hình ảnh đáng kinh ngạc và cách xây dựng không khí bí ẩn khiến tôi bị cuốn hút ngay từ những phút đầu tiên. Phim có sự kết hợp tuyệt vời giữa yếu tố tâm linh và máu me, tạo nên trải nghiệm khó quên. Nếu bạn là fan của thể loại kinh dị, đây chắc chắn là một tác phẩm không thể bỏ qua!",
+                    danh_gia2: "Điều ấn tượng nhất trong Quỷ Ăn Tạng chính là diễn xuất tuyệt vời của dàn diễn viên. Nhân vật chính truyền tải một cảm giác sợ hãi chân thực, giúp khán giả cảm nhận được nỗi khiếp sợ mà họ đang đối mặt. Cốt truyện độc đáo và bất ngờ đã giữ tôi ngồi im lặng suốt thời gian phim. Đây là một bộ phim kinh dị với nội dung sâu sắc, vượt xa những cảnh hù dọa thông thường.",
+                    danh_gia3: "Quỷ Ăn Tạng không chỉ đơn thuần là một bộ phim về máu me, mà còn là một tác phẩm nghệ thuật đầy sáng tạo. Bối cảnh phim tối tăm và âm thanh rùng rợn đã góp phần xây dựng nên bầu không khí đáng sợ đến nghẹt thở. Từng chi tiết nhỏ trong phim đều được chăm chút kỹ lưỡng, từ đạo cụ đến các cảnh quay, khiến tôi không thể rời mắt khỏi màn hình. Phim này chắc chắn sẽ ám ảnh tôi trong nhiều ngày tới!",
                 },
                 // {
                 //     img: "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202410/11482_103_100002.jpg",
@@ -350,6 +224,4 @@ export default {
     }
 }
 </script>
-<style>
-    
-</style>
+<style></style>

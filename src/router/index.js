@@ -8,12 +8,12 @@ const routes = [
     {
         path: '/login',
         component: ()=>import('../components/Client/login.vue'),
-        meta: {layout: 'client'}
+        meta: {layout: 'Login'}
     },
     {
         path: '/dang-ky',
         component: ()=>import('../components/Client/dangKy.vue'),
-        meta: {layout: 'client'}
+        meta: {layout: 'Login'}
     },
     {
         path: '/home-page',
