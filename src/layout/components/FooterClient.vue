@@ -1,5 +1,6 @@
 <template>
-    <div class="slide">
+    <div class="container">
+        <div class="slide">
         <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -60,6 +61,7 @@
         <p>
             COPYRIGHT @ LOTTECINEMAVN.COM - ALL RIGHTS RESERVED.
         </p>
+    </div>
     </div>
 </template>
 <script>

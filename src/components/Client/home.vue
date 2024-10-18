@@ -19,7 +19,7 @@
         <div class="text-center mt-3 mb-2" style="font-size: 20px">
             <a href=""><B>XEM THÊM</B></a>
         </div>
-        <div class="slide">
+        <!-- <div class="slide">
             <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -46,7 +46,7 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
