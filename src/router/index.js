@@ -139,6 +139,11 @@ const routes = [
         component: () => import('../components/admin/QuanLySuatChieu/index.vue'),
 
     },
+    {
+        path: '/admin/dang-nhap',
+        component: () => import('../components/Admin/DangNhap/index.vue'),
+        meta: { layout: 'auth' }
+    },
 
 ]
 
