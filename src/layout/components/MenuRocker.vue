@@ -46,7 +46,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/ghe-xem-phim">
-                        <div class="parent-icon"><i class="fa-solid fa-chair"></i>
+                        <div class="parent-icon"><i class="fa-solid fa-couch"></i>
                         </div>
                         <div class="menu-title">Quản Lý Ghế</div>
                     </a>
