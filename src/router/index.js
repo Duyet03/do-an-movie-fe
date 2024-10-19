@@ -82,7 +82,7 @@ const routes = [
     },
 
     //ADMIN
-    
+
     {
         path: '/admin/dich-vu',
         component: () => import('../components/admin/QuanLyDichVu/index.vue'),
@@ -139,7 +139,12 @@ const routes = [
         component: () => import('../components/admin/QuanLySuatChieu/index.vue'),
 
     },
-
+    // Admin dang nhap
+    {
+        path: '/admin/dang-nhap',
+        component: () => import('../components/Admin/DangNhap/index.vue'),
+        meta: { layout: 'auth' }
+    },
 ]
 
 const router = createRouter({
