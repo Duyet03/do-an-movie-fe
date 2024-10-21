@@ -1,7 +1,5 @@
 <template >
-    <div>
-        ĐĂNG NHẬP
-    </div>
+    ĐĂNG NHẬP
 </template>
 <script>
 export default {

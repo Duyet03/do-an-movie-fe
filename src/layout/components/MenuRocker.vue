@@ -31,81 +31,105 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/dich-vu">
+                    <router-link to="/admin/dich-vu" >
+                        <a class="nav-link" href="/admin/dich-vu">
                         <div class="parent-icon"><i class="fa-brands fa-servicestack"></i>
                         </div>
                         <div class="menu-title">Dịch Vụ</div>
                     </a>
+                    </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/doanh-thu">
+                    <router-link to="/admin/doanh-thu">
+                        <a class="nav-link" href="/admin/doanh-thu">
                         <div class="parent-icon"><i class="fa-solid fa-money-bill"></i>
                         </div>
                         <div class="menu-title">Doanh thu</div>
                     </a>
+                    </router-link>                       
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/ghe-xem-phim">
+                    <router-link to="/admin/ghe-xem-phim">
+                        <a class="nav-link" href="/admin/ghe-xem-phim">
                         <div class="parent-icon"><i class="fa-solid fa-couch"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Ghế</div>
+                        <div class="menu-title">Ghế</div>
                     </a>
+                    </router-link>
+                    
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/he-thong">
+                    <router-link to="/admin/he-thong">
+                        <a class="nav-link" href="/admin/he-thong">
                         <div class="parent-icon"><i class="fa-brands fa-ubuntu"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Hệ Thống</div>
+                        <div class="menu-title">Hệ Thống</div>
                     </a>
+                    </router-link>  
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/khuyen-mai">
+                    <router-link to="/admin/khuyen-mai">
+                        <a class="nav-link" href="/admin/khuyen-mai">
                         <div class="parent-icon"><i class="fa-solid fa-gift"></i>
                         </div>
                         <div class="menu-title">Khuyến Mãi</div>
                     </a>
+                    </router-link>
+                    
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/nguoi-dung">
+                    <router-link to="/admin/nguoi-dung">
+                        <a class="nav-link" href="/admin/nguoi-dung">
                         <div class="parent-icon"><i class="fa-solid fa-user"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Người Dùng</div>
+                        <div class="menu-title"> USER </div>
                     </a>
+                    </router-link>                   
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/noi-dung">
+                    <router-link to="/admin/noi-dung">
+                        <a class="nav-link" href="/admin/noi-dung">
                         <div class="parent-icon"><i class="fa-solid fa-book"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Nội Dung</div>
+                        <div class="menu-title">Nội Dung</div>
                     </a>
+                    </router-link>                    
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/phan-hoi">
+                    <router-link to="/admin/phan-hoi">
+                        <a class="nav-link" href="/admin/phan-hoi">
                         <div class="parent-icon"><i class="fa-solid fa-comments"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Phản Hồi</div>
+                        <div class="menu-title">Phản Hồi</div>
                     </a>
+                    </router-link>                 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/phim">
+                    <router-link to="/admin/phim">
+                        <a class="nav-link" href="/admin/phim">
                         <div class="parent-icon"><i class="fa-solid fa-video"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Phim</div>
+                        <div class="menu-title">Phim</div>
                     </a>
+                    </router-link>  
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/phong">
+                    <router-link to="/admin/phong">
+                        <a class="nav-link" href="/admin/phong">
                         <div class="parent-icon"><i class="fa-solid fa-shop"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Phòng</div>
+                        <div class="menu-title">Phòng</div>
                     </a>
+                    </router-link>          
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/suat-chieu">
+                    <router-link to="/admin/suat-chieu">
+                        <a class="nav-link" href="/admin/suat-chieu">
                         <div class="parent-icon"><i class="fa-solid fa-film"></i>
                         </div>
-                        <div class="menu-title">Quản Lý Suất Chiếu</div>
+                        <div class="menu-title">Suất Chiếu</div>
                     </a>
+                    </router-link>                   
                 </li>
             </ul>
         </nav>
