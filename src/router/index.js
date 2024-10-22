@@ -109,8 +109,13 @@ const routes = [
 
     },
     {
-        path: '/admin/nguoi-dung',
-        component: () => import('../components/admin/QuanLyNguoiDung/index.vue'),
+        path: '/admin/nguoi-dung/nhan-vien',
+        component: () => import('../components/admin/QuanLyNguoiDung/NhanVien/index.vue'),
+
+    },
+    {
+        path: '/admin/nguoi-dung/khach-hang',
+        component: () => import('../components/admin/QuanLyNguoiDung/KhachHang/index.vue'),
 
     },
     {

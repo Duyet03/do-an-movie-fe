@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import Default from './layout/wrapper/index.vue'
-import Login from './Layout/Wrapper/Login.vue'
+import Login from './Layout/Wrapper/login.vue'
 import client from './layout/wrapper/client.vue'
 const app = createApp(App)
 
