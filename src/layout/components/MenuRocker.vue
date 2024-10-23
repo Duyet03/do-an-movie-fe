@@ -55,7 +55,23 @@
                     </router-link>
                     
                 </li>
-                <li class="nav-item">
+                <li class="nav-item dropdown">
+                        <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+                        data-bs-toggle="dropdown">
+                        <div class="parent-icon"><i class="fa-brands fa-ubuntu"></i>
+                        </div>
+                            <div class="menu-title">Hệ thống</div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> 
+                               <router-link to="/admin/he-thong/chuc-vu">
+                                    <a class="dropdown-item" href="/admin/he-thong/chuc-vu">
+                                    <i class="bx bx-right-arrow-alt"></i>Chức vụ</a>
+                               </router-link>
+                            </li>
+                        </ul>
+                </li>
+                <!-- <li class="nav-item">
                     <router-link to="/admin/he-thong">
                         <a class="nav-link" href="/admin/he-thong">
                         <div class="parent-icon"><i class="fa-brands fa-ubuntu"></i>
@@ -63,7 +79,7 @@
                         <div class="menu-title">Hệ Thống</div>
                     </a>
                     </router-link>  
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <router-link to="/admin/khuyen-mai">
                         <a class="nav-link" href="/admin/khuyen-mai">

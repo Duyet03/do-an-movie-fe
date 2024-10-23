@@ -98,9 +98,14 @@ const routes = [
         component: () => import('../components/admin/QuanLyGhe/index.vue'),
 
     },
+    // {
+    //     path: '/admin/he-thong',
+    //     component: () => import('../components/admin/QuanLyHeThong/index.vue'),
+
+    // },
     {
-        path: '/admin/he-thong',
-        component: () => import('../components/admin/QuanLyHeThong/index.vue'),
+        path: '/admin/he-thong/chuc-vu',
+        component: () => import('../components/admin/QuanLyHeThong/ChucVu/index.vue'),
 
     },
     {
