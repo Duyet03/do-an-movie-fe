@@ -1,5 +1,5 @@
 <template >
-    Quản Lý doanh Thu
+    Quản Lý Hóa đơn
 </template>
 <script>
 export default {

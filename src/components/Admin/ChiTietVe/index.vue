@@ -1,11 +1,11 @@
 <template >
-    QUẢN LÝ ...
+    ggggggggggggggg
 </template>
 <script>
 export default {
-   
+    
 }
 </script>
 <style >
-   
+    
 </style>

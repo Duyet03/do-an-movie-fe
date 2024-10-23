@@ -89,41 +89,20 @@ const routes = [
 
     },
     {
-        path: '/admin/doanh-thu',
-        component: () => import('../components/admin/QuanLyDoanhThu/index.vue'),
-
-    },
-    {
         path: '/admin/ghe-xem-phim',
         component: () => import('../components/admin/QuanLyGhe/index.vue'),
 
     },
     {
-        path: '/admin/he-thong',
-        component: () => import('../components/admin/QuanLyHeThong/index.vue'),
+        path: '/admin/nhan-vien',
+        component: () => import('../components/admin/QuanLyNhanVien/index.vue'),
 
     },
     {
-        path: '/admin/khuyen-mai',
-        component: () => import('../components/admin/QuanLyKhuyenMai/index.vue'),
+        path: '/admin/danh-gia',
+        component: () => import('../components/admin/QuanLyDanhGia/index.vue'),
 
     },
-    {
-        path: '/admin/nguoi-dung',
-        component: () => import('../components/admin/QuanLyNguoiDung/index.vue'),
-
-    },
-    {
-        path: '/admin/noi-dung',
-        component: () => import('../components/admin/QuanLyNoiDung/index.vue'),
-
-    },
-    {
-        path: '/admin/phan-hoi',
-        component: () => import('../components/admin/QuanLyPhanHoi/index.vue'),
-
-    },
-
     {
         path: '/admin/phim',
         component: () => import('../components/admin/QuanLyPhim/index.vue'),
@@ -139,6 +118,55 @@ const routes = [
         component: () => import('../components/admin/QuanLySuatChieu/index.vue'),
 
     },
+    {
+        path: '/admin/hoa-don',
+        component: () => import('../components/admin/QuanLyHoaDon/index.vue'),
+
+    },
+    {
+        path: '/admin/phan-quyen',
+        component: () => import('../components/admin/PhanQuyen/index.vue'),
+
+    },
+    {
+        path: '/admin/chuc-vu',
+        component: () => import('../components/admin/ChucVu/index.vue'),
+
+    },
+    {
+        path: '/admin/khach-hang',
+        component: () => import('../components/admin/KhachHang/index.vue'),
+
+    },
+    {
+        path: '/admin/chuc-nang',
+        component: () => import('../components/admin/ChucNang/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-ve',
+        component: () => import('../components/admin/ChiTietVe/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-ghe',
+        component: () => import('../components/admin/ChiTietGhe/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-the-loai',
+        component: () => import('../components/admin/ChiTietTheLoai/index.vue'),
+
+    },
+    {
+        path: '/admin/the-loai-phim',
+        component: () => import('../components/admin/TheLoaiPhim/index.vue'),
+
+    },
+
+
+
+
     {
         path: '/admin/dang-nhap',
         component: () => import('../components/Admin/DangNhap/index.vue'),
