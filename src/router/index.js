@@ -154,6 +154,21 @@ const routes = [
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'auth' }
     },
+    {
+        path: '/admin/hoa-don',
+        component: () => import('../components/admin/QuanLyHoaDon/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-ve',
+        component: () => import('../components/admin/ChiTietVe/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-the-loai',
+        component: () => import('../components/admin/ChiTietTheLoai/index.vue'),
+
+    },
 
 ]
 
