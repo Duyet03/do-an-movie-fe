@@ -93,9 +93,19 @@ const routes = [
         component: () => import('../components/admin/QuanLyGhe/index.vue'),
 
     },
+    // {
+    //     path: '/admin/he-thong',
+    //     component: () => import('../components/admin/QuanLyHeThong/index.vue'),
+
+    // },
     {
+<<<<<<< HEAD
         path: '/admin/nhan-vien',
         component: () => import('../components/admin/QuanLyNhanVien/index.vue'),
+=======
+        path: '/admin/he-thong/chuc-vu',
+        component: () => import('../components/admin/QuanLyHeThong/ChucVu/index.vue'),
+>>>>>>> tung
 
     },
     {
@@ -104,6 +114,30 @@ const routes = [
 
     },
     {
+<<<<<<< HEAD
+=======
+        path: '/admin/nguoi-dung/nhan-vien',
+        component: () => import('../components/admin/QuanLyNguoiDung/NhanVien/index.vue'),
+
+    },
+    {
+        path: '/admin/nguoi-dung/khach-hang',
+        component: () => import('../components/admin/QuanLyNguoiDung/KhachHang/index.vue'),
+
+    },
+    {
+        path: '/admin/noi-dung',
+        component: () => import('../components/admin/QuanLyNoiDung/index.vue'),
+
+    },
+    {
+        path: '/admin/phan-hoi',
+        component: () => import('../components/admin/QuanLyPhanHoi/index.vue'),
+
+    },
+
+    {
+>>>>>>> tung
         path: '/admin/phim',
         component: () => import('../components/admin/QuanLyPhim/index.vue'),
 
@@ -171,6 +205,21 @@ const routes = [
         path: '/admin/dang-nhap',
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'auth' }
+    },
+    {
+        path: '/admin/hoa-don',
+        component: () => import('../components/admin/QuanLyHoaDon/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-ve',
+        component: () => import('../components/admin/ChiTietVe/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-the-loai',
+        component: () => import('../components/admin/ChiTietTheLoai/index.vue'),
+
     },
 
 ]
