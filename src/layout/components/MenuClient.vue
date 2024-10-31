@@ -66,18 +66,18 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/c11aacf2c3b4446ba86c96e9e9be5b61.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/544c1477d2f0455dbb3f743075eafb8b.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/4e520019a0dc46969fb348d80d405a9c.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
+                <template v-for="(v, k) in ds_slide" :key="k">
+                    <template v-if="k == 0">
+                        <div class="carousel-item active">
+                            <img v-bind:src="v.link_hinh_anh" class="d-block w-100" alt="...">
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div class="carousel-item">
+                            <img v-bind:src="v.link_hinh_anh" class="d-block w-100" alt="...">
+                        </div>
+                    </template>
+                </template>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
@@ -93,9 +93,36 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
 export default {
+    data() {
+        return {
 
+            ds_slide: [],
+        }
+    },
+    mounted() {
+
+        this.layDuLieuSlide();
+    },
+    methods: {
+        layDuLieuReview() {
+            axios
+                .get('http://127.0.0.1:8000/api/review/data')
+                .then((res) => {
+                    this.ds_review = res.data.review;
+                })
+        },
+        layDuLieuSlide() {
+            axios
+                .get('http://127.0.0.1:8000/api/slide/data')
+                .then((res) => {
+                    this.ds_slide = res.data.slide;
+                })
+        },
+    },
 }
 </script>
-
 <style></style>

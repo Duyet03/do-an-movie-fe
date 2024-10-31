@@ -3,18 +3,18 @@
         <div class="slide">
             <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/ebd47d1784f74d6a9cb933c48efed53a.jpg"
-                            class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/ecf8ee277eb24ee8a409d31eb5a856c7.jpg"
-                            class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/ecf8ee277eb24ee8a409d31eb5a856c7.jpg"
-                            class="d-block w-100" alt="...">
-                    </div>
+                    <template v-for="(v, k) in ds_slide" :key="k">
+                        <template v-if="k == 0">
+                            <div class="carousel-item active">
+                                <img v-bind:src="v.link_hinh_anh" class="d-block w-100" alt="...">
+                            </div>
+                        </template>
+                        <template v-else>
+                            <div class="carousel-item">
+                                <img v-bind:src="v.link_hinh_anh" class="d-block w-100" alt="...">
+                            </div>
+                        </template>
+                    </template>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
                     data-bs-slide="prev">
@@ -65,9 +65,36 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
 export default {
+    data() {
+        return {
 
+            ds_slide: [],
+        }
+    },
+    mounted() {
+
+        this.layDuLieuSlide();
+    },
+    methods: {
+        layDuLieuReview() {
+            axios
+                .get('http://127.0.0.1:8000/api/review/data')
+                .then((res) => {
+                    this.ds_review = res.data.review;
+                })
+        },
+        layDuLieuSlide() {
+            axios
+                .get('http://127.0.0.1:8000/api/slide/data')
+                .then((res) => {
+                    this.ds_slide = res.data.slide;
+                })
+        },
+    },
 }
 </script>
-
 <style></style>
