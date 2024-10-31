@@ -161,12 +161,12 @@ const routes = [
     },
     {
         path: '/admin/chi-tiet-ve',
-        component: () => import('../components/admin/ChiTietVe/index.vue'),
+        component: () => import('../components/Admin/ChiTietVe/index.vue'),
 
     },
     {
         path: '/admin/chi-tiet-the-loai',
-        component: () => import('../components/admin/ChiTietTheLoai/index.vue'),
+        component: () => import('../components/Admin/ChiTietTheLoai/index.vue'),
 
     },
 

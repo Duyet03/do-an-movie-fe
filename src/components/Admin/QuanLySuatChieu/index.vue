@@ -64,7 +64,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="mt-2">Danh Sách Suất Chiếu</h5>
+                    <h5 class="mt-2">Danh Sách Phòng</h5>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

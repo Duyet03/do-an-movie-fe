@@ -1,6 +1,5 @@
-
 <template >
-    ĐĂNG NHẬP
+    Quản Lý doanh Thu
 </template>
 <script>
 export default {
@@ -10,4 +9,3 @@ export default {
 <style >
     
 </style>
-
