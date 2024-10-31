@@ -114,6 +114,15 @@
                     </router-link>  
                 </li>
                 <li class="nav-item">
+                    <router-link to="/admin/the-loai">
+                        <a class="nav-link" href="/admin/the-loai">
+                        <div class="parent-icon"><i class="fa-solid fa-video"></i>
+                        </div>
+                        <div class="menu-title">Thể Loại</div>
+                    </a>
+                    </router-link>  
+                </li>
+                <li class="nav-item">
                     <router-link to="/admin/phong">
                         <a class="nav-link" href="/admin/phong">
                         <div class="parent-icon"><i class="fa-solid fa-shop"></i>

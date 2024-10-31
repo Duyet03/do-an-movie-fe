@@ -130,6 +130,11 @@ const routes = [
 
     },
     {
+        path: '/admin/the-loai',
+        component: () => import('../components/admin/TheLoai/index.vue'),
+
+    },
+    {
         path: '/admin/phong',
         component: () => import('../components/admin/QuanLyPhong/index.vue'),
 
