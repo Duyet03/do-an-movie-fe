@@ -118,6 +118,7 @@
                         <div class="menu-title"> Người dùng </div>
                     </a>
                     </router-link>                   
+<<<<<<< HEAD
                 </li> -->
         <li class="nav-item">
           <router-link to="/admin/noi-dung">
@@ -191,6 +192,66 @@
       </ul>
     </nav>
   </div>
+=======
+                </li>
+                <li class="nav-item">
+                    <router-link to="/admin/noi-dung">
+                        <a class="nav-link" href="/admin/noi-dung">
+                        <div class="parent-icon"><i class="fa-solid fa-book"></i>
+                        </div>
+                        <div class="menu-title">Nội Dung</div>
+                    </a>
+                    </router-link>                    
+                </li>
+                <li class="nav-item">
+                    <router-link to="/admin/phan-hoi">
+                        <a class="nav-link" href="/admin/phan-hoi">
+                        <div class="parent-icon"><i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div class="menu-title">Phản Hồi</div>
+                    </a>
+                    </router-link>                 
+                </li>
+                <li class="nav-item">
+                    <router-link to="/admin/phim">
+                        <a class="nav-link" href="/admin/phim">
+                        <div class="parent-icon"><i class="fa-solid fa-video"></i>
+                        </div>
+                        <div class="menu-title">Phim</div>
+                    </a>
+                    </router-link>  
+                </li>
+                <li class="nav-item">
+                    <router-link to="/admin/the-loai">
+                        <a class="nav-link" href="/admin/the-loai">
+                        <div class="parent-icon"><i class="fa-solid fa-video"></i>
+                        </div>
+                        <div class="menu-title">Thể Loại</div>
+                    </a>
+                    </router-link>  
+                </li>
+                <li class="nav-item">
+                    <router-link to="/admin/phong">
+                        <a class="nav-link" href="/admin/phong">
+                        <div class="parent-icon"><i class="fa-solid fa-shop"></i>
+                        </div>
+                        <div class="menu-title">Phòng</div>
+                    </a>
+                    </router-link>          
+                </li>
+                <li class="nav-item">
+                    <router-link to="/admin/suat-chieu">
+                        <a class="nav-link" href="/admin/suat-chieu">
+                        <div class="parent-icon"><i class="fa-solid fa-film"></i>
+                        </div>
+                        <div class="menu-title">Suất Chiếu</div>
+                    </a>
+                    </router-link>                   
+                </li>
+            </ul>
+        </nav>
+    </div>
+>>>>>>> thanh
 </template>
 <script>
 export default {};
