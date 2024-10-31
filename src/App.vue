@@ -1,4 +1,3 @@
-
 <template>
   <component :is="layout">
     <router-view></router-view>
@@ -15,4 +14,4 @@ export default {
   },
 };
 </script>
-<style>
+<style></style>
