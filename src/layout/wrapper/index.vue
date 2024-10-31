@@ -17,7 +17,7 @@
     </div>
 </template>
 <script>
-import TopRocker from "../components/TopRocker.vue";
+import TopRocker from "../components/TopRoker.vue";
 import MenuRocker from "../components/MenuRocker.vue";
 import BotRocker from "../components/BotRocker.vue";
 import "../../assets/js/bootstrap.bundle.min.js";
@@ -28,8 +28,8 @@ import "../../assets/plugins/metismenu/js/metisMenu.min.js";
 import "../../assets/js/index.js";
 import "../../assets/js/app.js";
 export default {
-    name        : "app",
-    components  : {
+    name: "app",
+    components: {
         TopRocker, MenuRocker, BotRocker
     }
 }
