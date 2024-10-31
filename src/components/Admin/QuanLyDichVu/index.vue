@@ -1,7 +1,4 @@
 <template>
-<<<<<<< HEAD
-   
-=======
     <!-- them -->
     <div class="row">
         <div class="col-lg-12">
@@ -187,16 +184,12 @@
             </div>
         </div>
     </div>
->>>>>>> tung
 </template>
 <script>
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
 export default {
-<<<<<<< HEAD
-
-=======
     data() {
         return {
             danh_sach_dich_vu: [],
@@ -260,7 +253,6 @@ export default {
                 })
         },
     },
->>>>>>> tung
 }
 </script>
 <style></style>

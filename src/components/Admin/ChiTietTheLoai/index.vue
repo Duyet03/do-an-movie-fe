@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<template >
-    Chỉ tiếtttttt
-</template>
-<script>
-export default {
-    
-}
-</script>
-<style >
-    
-</style>
-=======
 <template>
     <div class="container">
         <div class="row">
@@ -193,4 +180,3 @@ export default {
 }
 </script>
 <style></style>
->>>>>>> tung

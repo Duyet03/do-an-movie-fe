@@ -1,5 +1,6 @@
+
 <template >
-    kkkkkkkkkkkkkkkkkkkkk
+    ĐĂNG NHẬP
 </template>
 <script>
 export default {
