@@ -107,7 +107,7 @@ const routes = [
     },
     {
         path: '/admin/khuyen-mai',
-        component: () => import('../components/admin/QuanLyKhuyenMai/index.vue'),
+        component: () => import('../components/Admin/QuanLyKhuyenMai/index.vue'),
 
     },
     {
@@ -153,7 +153,7 @@ const routes = [
     },
     {
         path: '/admin/hoa-don',
-        component: () => import('../components/admin/QuanLyHoaDon/index.vue'),
+        component: () => import('../components/Admin/QuanLyHoaDon/index.vue'),
 
     },
     {
