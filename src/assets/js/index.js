@@ -1,3 +1,4 @@
+
 (function() {
   "use strict";
 
@@ -41,4 +42,5 @@ jQuery('#geographic-map-2').vectorMap(
 });
 
  });	 
+
  

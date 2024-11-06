@@ -40,15 +40,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="(value, index) in ds_slide" :key="index">
-                                    <th class="text-center align-middle">{{ index + 1 }}</th>
+                                <tr v-for="(v, k) in ds_slide" :key="k">
+                                    <th class="text-center align-middle">{{ k + 1 }}</th>
                                     <td class="align-middle text-center">
-                                        <img v-bind:src="value.link_hinh_anh" class="img-fluid"
+                                        <img v-bind:src="v.link_hinh_anh" class="img-fluid"
                                             style="height: 200px; width: 300px;">
                                     </td>
-                                    <th class="text-center align-middle">{{ value.tinh_trang }}</th>
+                                    <td class="text-center align-middle">
+                                        <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang == 1"
+                                            class="btn btn-success">Hoạt động</button>
+                                        <button v-on:click="doiTrangThai(v)" v-else class="btn btn-primary">Tạm
+                                            dừng</button>
+                                    </td>
                                     <td class="text-center text-nowrap align-middle">
-                                        <button v-on:click="Object.assign(slide_update, value)" data-bs-toggle="modal"
+                                        <button v-on:click="Object.assign(slide_update, v)" data-bs-toggle="modal"
                                             data-bs-target="#updateModal" class="btn btn-info me-1">Cập Nhật</button>
                                         <button data-bs-toggle="modal" data-bs-target="#deleteModal"
                                             v-on:click="id_can_xoa = value.id" class="btn btn-danger">Xoá Bỏ</button>
@@ -170,7 +175,19 @@ export default {
                         this.layDuLieu();
                     }
                 });
-        }
+        },
+        doiTrangThai(xxx) {
+            axios
+                .put('http://127.0.0.1:8000/api/slide/doi-trang-thai', xxx)
+                .then((res) => {
+                    if (res.data.status == true) {
+                        toaster.success(res.data.message)
+                        this.layDuLieu();
+                    } else {
+                        toaster.error(res.data.message)
+                    }
+                })
+        },
     },
 }
 </script>
