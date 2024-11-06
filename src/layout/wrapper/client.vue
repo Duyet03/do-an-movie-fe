@@ -16,8 +16,8 @@ import "../../assets/plugins/metismenu/js/metisMenu.min.js";
 import "../../assets/js/index.js";
 import "../../assets/js/app.js";
 export default {
-    name        : "app",
-    components  : {
+    name: "app",
+    components: {
         MenuClient, FooterClient
     }
 }

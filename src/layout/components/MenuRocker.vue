@@ -118,6 +118,7 @@
                         <div class="menu-title"> Người dùng </div>
                     </a>
                     </router-link>                   
+
                 </li> -->
         <li class="nav-item">
           <router-link to="/admin/noi-dung">
@@ -188,6 +189,15 @@
             </a>
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/admin/the-loai">
+            <a class="nav-link" href="/admin/the-loai">
+              <div class="parent-icon"><i class="fa-solid fa-video"></i>
+              </div>
+              <div class="menu-title">Thể Loại</div>
+            </a>
+          </router-link>
+        </li>
       </ul>
     </nav>
   </div>
@@ -195,4 +205,5 @@
 <script>
 export default {};
 </script>
+
 <style></style>

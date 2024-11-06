@@ -3,7 +3,8 @@
         <div class="card">
             <div class="card-body d-flex justify-content-between">
                 <h3>Tạo chi tiết vé</h3>
-                <button data-bs-toggle="modal" data-bs-target="#themmoi" style="width: 100px;" class="btn btn-primary">Tạo <i class="fa-solid fa-plus"></i></button>
+                <button data-bs-toggle="modal" data-bs-target="#themmoi" style="width: 100px;"
+                    class="btn btn-primary">Tạo <i class="fa-solid fa-plus"></i></button>
             </div>
         </div>
         <div class="card">
@@ -34,11 +35,12 @@
                                     <td class="text-center align-middle">{{ v.id_suat }}</td>
                                     <td class="text-center align-middle">{{ v.id_ghe }}</td>
                                     <td class="text-center align-middle">{{ v.id_hoa_don }}</td>
-                                    <td class="text-center align-middle"><i data-bs-toggle="modal" data-bs-target="#ghichu" class="fa-2x fa-solid fa-pen-to-square"></i>
+                                    <td class="text-center align-middle"><i data-bs-toggle="modal"
+                                            data-bs-target="#ghichu" class="fa-2x fa-solid fa-pen-to-square"></i>
                                     </td>
                                     <td class="text-center align-middle">
-                                        <button v-on:click="Object.assign(chi_tiet_ve_update,v)" data-bs-toggle="modal" data-bs-target="#cap_nhat"
-                                            class="btn btn-primary">Cập nhật</button>
+                                        <button v-on:click="Object.assign(chi_tiet_ve_update, v)" data-bs-toggle="modal"
+                                            data-bs-target="#cap_nhat" class="btn btn-primary">Cập nhật</button>
                                         <button data-bs-toggle="modal" data-bs-target="#xoa"
                                             v-on:click="id_can_xoa = v.id" class="btn btn-danger ms-1">Xoá</button>
                                     </td>
@@ -47,8 +49,8 @@
                                     </td>
                                 </tr>
                                 <!-- ghi chu -->
-                                <div class="modal fade" id="ghichu" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="ghichu" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -94,14 +96,14 @@
                         <label for="">Hoá đơn</label>
                         <input v-model="chi_tiet_ve_update.id_hoa_don" class="form-control mb-2" type="text">
                         <label for="">Ghi chú</label>
-                        <textarea v-model="chi_tiet_ve_update.ghi_chu" class="form-control " name="" id="" cols="30" rows="10"></textarea>
+                        <textarea v-model="chi_tiet_ve_update.ghi_chu" class="form-control " name="" id="" cols="30"
+                            rows="10"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button v-on:click="capNhat()" type="button" class="btn btn-primary"
-                            data-bs-dismiss="modal">Cập
+                        <button v-on:click="capNhat()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Cập
                             nhật</button>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,12 +150,14 @@
                         <label for="">Hoá đơn</label>
                         <input v-model="chi_tiet_ve_create.id_hoa_don" class="form-control mb-2" type="text">
                         <label for="">Ghi chú</label>
-                        <textarea v-model="chi_tiet_ve_create.ghi_chu" class="form-control " name="" id="" cols="30" rows="10"></textarea>
+                        <textarea v-model="chi_tiet_ve_create.ghi_chu" class="form-control " name="" id="" cols="30"
+                            rows="10"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button v-on:click="themMoi()" type="button" class="btn btn-primary"
-                            data-bs-dismiss="modal">Thêm mới</button>
+                            data-bs-dismiss="modal">Thêm
+                            mới</button>
                     </div>
                 </div>
             </div>
@@ -230,4 +234,5 @@ export default {
     },
 }
 </script>
+
 <style></style>

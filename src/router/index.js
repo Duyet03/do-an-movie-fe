@@ -1,3 +1,5 @@
+
+
 import { createRouter, createWebHistory } from "vue-router"; // cài vue-router: npm install vue-router@next --save
 
 const routes = [
@@ -75,11 +77,7 @@ const routes = [
         component: () => import('../components/Client/thanhToan.vue'),
         meta: { layout: 'client' }
     },
-    {
-        path: '/thanh-toan',
-        component: () => import('../components/Client/thanhToan.vue'),
-        meta: { layout: 'client' }
-    },
+  
 
     //ADMIN
 
@@ -110,7 +108,7 @@ const routes = [
     },
     {
         path: '/admin/khuyen-mai',
-        component: () => import('../components/admin/QuanLyKhuyenMai/index.vue'),
+        component: () => import('../components/Admin/QuanLyKhuyenMai/index.vue'),
 
     },
     {
@@ -156,19 +154,30 @@ const routes = [
     },
     {
         path: '/admin/hoa-don',
-        component: () => import('../components/admin/QuanLyHoaDon/index.vue'),
+        component: () => import('../components/Admin/QuanLyHoaDon/index.vue'),
 
     },
     {
         path: '/admin/chi-tiet-ve',
-        component: () => import('../components/admin/ChiTietVe/index.vue'),
+        component: () => import('../components/Admin/ChiTietVe/index.vue'),
 
     },
     {
         path: '/admin/chi-tiet-the-loai',
-        component: () => import('../components/admin/ChiTietTheLoai/index.vue'),
+        component: () => import('../components/Admin/ChiTietTheLoai/index.vue'),
 
     },
+    {
+        path: '/admin/the-loai',
+        component: () => import('../components/Admin/TheLoai/index.vue'),
+
+    },
+    {
+        path: '/admin/dang-nhap',
+        component: () => import('../components/Admin/DangNhap/index.vue'),
+        meta: { layout: 'auth' }
+    },
+
 
 ]
 
@@ -177,4 +186,6 @@ const router = createRouter({
     routes: routes
 })
 
+
 export default router
+
