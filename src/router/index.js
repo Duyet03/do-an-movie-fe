@@ -177,7 +177,10 @@ const routes = [
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'auth' }
     },
-
+    {
+        path: '/admin/phan-quyen',
+        component: () => import('../components/Admin/PhanQuyen/index.vue'),
+    },
 
 ]
 
