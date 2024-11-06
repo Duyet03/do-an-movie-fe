@@ -15,12 +15,12 @@
                             <form class="row g-3">
                                 <div class="col-12">
                                     <label class="form-label">Email Address</label>
-                                    <input type="email" class="form-control"
-                                        id="inputEmailAddress" placeholder="Email Address">
+                                    <input type="email" class="form-control" id="inputEmailAddress"
+                                        placeholder="Email Address">
                                 </div>
                                 <div class="col-12">
                                     <label for="inputChoosePassword" class="form-label">Enter Password</label>
-                                    <input  type="password" class="form-control border-end-0"
+                                    <input type="password" class="form-control border-end-0"
                                         placeholder="Enter Password">
                                 </div>
                                 <div class="col-md-6">
@@ -38,13 +38,13 @@
                                 </div>
                                 <div class="col-12">
                                     <router-link to="/home-page">
-                                    <div class="d-grid">
-                                        
+                                        <div class="d-grid">
+
                                             <button type="button" class="btn btn-primary"><i
-                                                class="bx bxs-lock-open"></i>Sign in</button>
-                                        
-                                    </div>
-                                </router-link>
+                                                    class="bx bxs-lock-open"></i>Sign in</button>
+
+                                        </div>
+                                    </router-link>
                                 </div>
                             </form>
                         </div>
@@ -56,9 +56,7 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
-<style>
-    
-</style>
+<style></style>

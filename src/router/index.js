@@ -1,3 +1,5 @@
+
+
 import { createRouter, createWebHistory } from "vue-router"; // cài vue-router: npm install vue-router@next --save
 
 const routes = [
@@ -75,11 +77,7 @@ const routes = [
         component: () => import('../components/Client/thanhToan.vue'),
         meta: { layout: 'client' }
     },
-    {
-        path: '/thanh-toan',
-        component: () => import('../components/Client/thanhToan.vue'),
-        meta: { layout: 'client' }
-    },
+  
 
     //ADMIN
 
@@ -98,19 +96,29 @@ const routes = [
         component: () => import('../components/admin/QuanLyGhe/index.vue'),
 
     },
+    // {
+    //     path: '/admin/he-thong',
+    //     component: () => import('../components/admin/QuanLyHeThong/index.vue'),
+
+    // },
     {
-        path: '/admin/he-thong',
-        component: () => import('../components/admin/QuanLyHeThong/index.vue'),
+        path: '/admin/he-thong/chuc-vu',
+        component: () => import('../components/admin/QuanLyHeThong/ChucVu/index.vue'),
 
     },
     {
         path: '/admin/khuyen-mai',
-        component: () => import('../components/admin/QuanLyKhuyenMai/index.vue'),
+        component: () => import('../components/Admin/QuanLyKhuyenMai/index.vue'),
 
     },
     {
-        path: '/admin/nguoi-dung',
-        component: () => import('../components/admin/QuanLyNguoiDung/index.vue'),
+        path: '/admin/nguoi-dung/nhan-vien',
+        component: () => import('../components/admin/QuanLyNguoiDung/NhanVien/index.vue'),
+
+    },
+    {
+        path: '/admin/nguoi-dung/khach-hang',
+        component: () => import('../components/admin/QuanLyNguoiDung/KhachHang/index.vue'),
 
     },
     {
@@ -130,11 +138,6 @@ const routes = [
 
     },
     {
-        path: '/admin/the-loai',
-        component: () => import('../components/admin/TheLoai/index.vue'),
-
-    },
-    {
         path: '/admin/phong',
         component: () => import('../components/admin/QuanLyPhong/index.vue'),
 
@@ -149,6 +152,32 @@ const routes = [
         component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'auth' }
     },
+    {
+        path: '/admin/hoa-don',
+        component: () => import('../components/Admin/QuanLyHoaDon/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-ve',
+        component: () => import('../components/Admin/ChiTietVe/index.vue'),
+
+    },
+    {
+        path: '/admin/chi-tiet-the-loai',
+        component: () => import('../components/Admin/ChiTietTheLoai/index.vue'),
+
+    },
+    {
+        path: '/admin/the-loai',
+        component: () => import('../components/Admin/TheLoai/index.vue'),
+
+    },
+    {
+        path: '/admin/dang-nhap',
+        component: () => import('../components/Admin/DangNhap/index.vue'),
+        meta: { layout: 'auth' }
+    },
+
 
 ]
 
@@ -157,4 +186,6 @@ const router = createRouter({
     routes: routes
 })
 
+
 export default router
+

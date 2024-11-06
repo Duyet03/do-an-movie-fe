@@ -1,8 +1,40 @@
 <template>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="javascript:;" title="Hướng dẫn cài đặt ứng dụng Lotte Cinema App QR Code">Lotte
+            Cinema APP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/LotteCinema" target="_blank"
+                        title="Lotte Cinema Facebook">Lotte Cinema Facebook</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="lbtnLogin" title="Đăng nhập" href="/login">Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:goToMembershipMenu(0,4,1);" id="topMembership"
+                        title="Thẻ thành viên">Thẻ thành viên</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:goCustomerCenterMenu('0');" id="topCustomerService"
+                        title="Hỗ trợ khách hàng">Hỗ trợ khách hàng</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
     <div style="height: 100px;background-color: white;border-bottom: 3px solid olivedrab;" class="text-center">
         <img style="height: 97px"
             src="https://media.lottecinemavn.com/Media/WebAdmin/ccc95ee5b9274a12ba3e51317250dcbe.png" alt="" />
     </div>
+
     <div class="nav primary-menu" style=" height: 40px">
         <nav class="navbar navbar-expand-xl w-100">
             <ul class="navbar-nav justify-content-center flex-grow-1 gap-1">
@@ -66,18 +98,18 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/c11aacf2c3b4446ba86c96e9e9be5b61.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/544c1477d2f0455dbb3f743075eafb8b.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="https://media.lottecinemavn.com/Media/WebAdmin/4e520019a0dc46969fb348d80d405a9c.jpg"
-                        class="d-block w-100" alt="..." />
-                </div>
+                <template v-for="(v, k) in ds_slide" :key="k">
+                    <template v-if="k == 0">
+                        <div class="carousel-item active">
+                            <img v-bind:src="v.link_hinh_anh" class="d-block w-100" alt="...">
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div class="carousel-item">
+                            <img v-bind:src="v.link_hinh_anh" class="d-block w-100" alt="...">
+                        </div>
+                    </template>
+                </template>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
@@ -93,8 +125,36 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
 export default {
+    data() {
+        return {
 
+            ds_slide: [],
+        }
+    },
+    mounted() {
+
+        this.layDuLieuSlide();
+    },
+    methods: {
+        layDuLieuReview() {
+            axios
+                .get('http://127.0.0.1:8000/api/review/data')
+                .then((res) => {
+                    this.ds_review = res.data.review;
+                })
+        },
+        layDuLieuSlide() {
+            axios
+                .get('http://127.0.0.1:8000/api/slide/data')
+                .then((res) => {
+                    this.ds_slide = res.data.slide;
+                })
+        },
+    },
 }
 </script>
 <style></style>
