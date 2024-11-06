@@ -65,8 +65,8 @@
                                     
                                     
                                     <td class="text-center align-middle text-nowrap">
-                                        <button  class="btn btn-info me-2" style="width: 100px;" data-bs-toggle="modal"
-                                            data-bs-target="#capNhatModal">Cập Nhật</button>
+                                        <button v-on:click="Object.assign(edit_the_loai,v)"  class="btn btn-info me-2" style="width: 100px;" data-bs-toggle="modal"
+                                            data-bs-target="#capnhatModal">Cập Nhật</button>
                                         <button v-on:click="delete_the_loai=v.id"  class="btn btn-danger" style="width: 100px;" data-bs-toggle="modal"
                                             data-bs-target="#xoaModal" >Xóa</button>
                                     </td>
@@ -149,6 +149,38 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="capnhatModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm Mới Phim</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label class="form-label">Tên Phim</label>
+                                                <input v-model="edit_the_loai.ten_the_loai" type="text" class="form-control mb-3"
+                                                    placeholder="Nhập tên phim">
+                                            </div>
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Đóng</button>
+                                    <button v-on:click="updateTheLoai()" data-bs-dismiss="modal" type="button" class="btn btn-primary">Cap Nhat</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    
     </div>
     
 </template>
@@ -164,6 +196,7 @@ export default {
             create_the_loai : {},
             delete_the_loai :   {},
             edit_the_loai   :   {},
+            edit_the_loai : {},
         }
     },
     mounted() {
@@ -216,7 +249,7 @@ export default {
                     }
                 })
         },
-        updateQuanLyPhim() {
+        updateTheLoai() {
             
             axios
                 .put('http://127.0.0.1:8000/api/admin/the-loai-phim/update', this.edit_the_loai)
@@ -235,7 +268,6 @@ export default {
                     });
                 });
         },
-
     },
 }
 </script>
