@@ -75,9 +75,13 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="mb-2 mt-2">
-                                                <label>Chức Vụ</label>
-                                                <input v-model="nhan_vien_create.id_chuc_vu" type="text"
-                                                    class="form-control mt-2" />
+                                                <label for="">Chức Vụ</label>
+                                                <select name="" v-model="nhan_vien_create.id_chuc_vu"
+                                                    class="form-control mt-2">
+                                                    <template v-for="(v, k) in listPhanQuyen" :key="k">
+                                                        <option v-bind:value="v.id">{{ v.ten_quyen }}</option>
+                                                    </template>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -148,7 +152,7 @@
                                         <td>{{ v.email }}</td>
                                         <td>{{ v.password }}</td>
                                         <td>{{ v.ngay_bat_dau }}</td>
-                                        <td>{{ v.id_chuc_vu }}</td>
+                                        <td>{{ v.ten_quyen }}</td>
                                         <td>{{ v.avatar }}</td>
                                         <td class="text-center">
                                             <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang == 1"
@@ -226,8 +230,12 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="mb-2 mt-2">
-                                <label>Chức Vụ</label>
-                                <input v-model="nhan_vien_update.id_chuc_vu" type="text" class="form-control mt-2" />
+                                <label for="">Chức Vụ</label>
+                                <select name="" v-model="nhan_vien_update.id_chuc_vu" class="form-control mt-2" id="">
+                                    <template v-for="(v, k) in listPhanQuyen" :key="k">
+                                        <option v-bind:value="v.id">{{ v.ten_quyen }}</option>
+                                    </template>
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -283,6 +291,7 @@ export default {
     data() {
         return {
             danh_sach_nhan_vien: [],
+            listPhanQuyen: [],
             nhan_vien_create: {},
             nhan_vien_update: {},
             id_can_xoa: '',
@@ -290,8 +299,21 @@ export default {
     },
     mounted() {
         this.layNhanVien();
+        this.layDuLieuPhanQuyen();
     },
     methods: {
+        layDuLieuPhanQuyen() {
+            axios
+                .get("http://127.0.0.1:8000/api/phan-quyen/data")
+                .then((res) => {
+                    if (res.data.status == false) {
+                        toaster.error(res.data.message)
+                    }
+                    this.listPhanQuyen = res.data.data;
+                });
+        },
+
+
         layNhanVien() {
             axios
                 .get("http://127.0.0.1:8000/api/nhan-vien/data")
