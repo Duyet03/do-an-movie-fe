@@ -146,7 +146,7 @@ const routes = [
     },
     {
         path: '/admin/suat-chieu',
-        component: () => import('../components/admin/QuanLySuatChieu/index.vue'),
+        component: () => import('../components/Admin/QuanLySuatChieu/index.vue'),
         beforeEnter: kiemTraAdmin,
     },
     {

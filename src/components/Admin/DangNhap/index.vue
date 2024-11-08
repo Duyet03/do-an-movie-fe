@@ -79,16 +79,14 @@ export default {
                 .then((res) => {
                     if (res.data.status) {
                         toaster.success(res.data.message)
-                        // cai đặt và máy 
                         localStorage.setItem('token_admin', res.data.token);
                         localStorage.setItem('ho_ten_admin', res.data.ho_ten_admin);
                         localStorage.setItem('avatar_admin', res.data.avatar_admin);
-                        this.$router.push('/');
+                        this.$router.push('/admin/phan-quyen');
                     }
                     else {
                         toaster.error(res.data.message)
                     }
-
                 });
         },
     },

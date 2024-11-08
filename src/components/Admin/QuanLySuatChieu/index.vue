@@ -177,6 +177,7 @@
 import axios from 'axios';
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -192,15 +193,15 @@ export default {
     methods: {
 
         layDuLieuSuatChieu() {
-            axios
-                .get('http://127.0.0.1:8000/api/suat-chieu/data')
+            baseRequest
+                .get('suat-chieu/data')
                 .then((res) => {
                     this.ds_suat = res.data.suat;
                 })
         },
         themMoiSuat() {
-            axios
-                .post("http://127.0.0.1:8000/api/suat-chieu/create", this.suat_create)
+            baseRequest
+                .post("suat-chieu/create", this.suat_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -209,8 +210,8 @@ export default {
                 });
         },
         xoaSuat() {
-            axios
-                .delete("http://127.0.0.1:8000/api/suat-chieu/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("suat-chieu/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -219,8 +220,8 @@ export default {
                 });
         },
         capNhatSuat() {
-            axios
-                .put("http://127.0.0.1:8000/api/suat-chieu/update", this.suat_update)
+            baseRequest
+                .put("suat-chieu/update", this.suat_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -229,8 +230,8 @@ export default {
                 });
         },
         doiTrangThai(xxx) {
-            axios
-                .put('http://127.0.0.1:8000/api/suat-chieu/doi-trang-thai', xxx)
+            baseRequest
+                .put('suat-chieu/doi-trang-thai', xxx)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)

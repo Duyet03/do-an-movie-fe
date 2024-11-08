@@ -287,6 +287,7 @@
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -303,8 +304,8 @@ export default {
     },
     methods: {
         layDuLieuPhanQuyen() {
-            axios
-                .get("http://127.0.0.1:8000/api/phan-quyen/data")
+            baseRequest
+                .get("phan-quyen/data")
                 .then((res) => {
                     if (res.data.status == false) {
                         toaster.error(res.data.message)
@@ -315,16 +316,16 @@ export default {
 
 
         layNhanVien() {
-            axios
-                .get("http://127.0.0.1:8000/api/nhan-vien/data")
+            baseRequest
+                .get("nhan-vien/data")
                 .then((res) => {
                     this.danh_sach_nhan_vien = res.data.data;
                     console.log(this.danh_sach_nhan_vien);
                 });
         },
         themNhanVien() {
-            axios
-                .post('http://127.0.0.1:8000/api/nhan-vien/create', this.nhan_vien_create)
+            baseRequest
+                .post('nhan-vien/create', this.nhan_vien_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -334,8 +335,8 @@ export default {
         },
 
         xoaNhanVien() {
-            axios
-                .delete("http://127.0.0.1:8000/api/nhan-vien/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("nhan-vien/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -344,8 +345,8 @@ export default {
                 });
         },
         capNhatNhanVien() {
-            axios
-                .put("http://127.0.0.1:8000/api/nhan-vien/update", this.nhan_vien_update)
+            baseRequest
+                .put("nhan-vien/update", this.nhan_vien_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -354,8 +355,8 @@ export default {
                 });
         },
         doiTrangThai(xxx) {
-            axios
-                .put('http://127.0.0.1:8000/api/nhan-vien/doi-trang-thai', xxx)
+            baseRequest
+                .put('nhan-vien/doi-trang-thai', xxx)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)

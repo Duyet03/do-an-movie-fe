@@ -168,6 +168,7 @@
 import { createToaster } from "@meforma/vue-toaster";
 import axios from "axios";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -185,15 +186,15 @@ export default {
             return new Intl.NumberFormat('vi-VI', { style: 'currency', currency: 'VND' }).format(number);
         },
         loadData() {
-            axios
-                .get("http://127.0.0.1:8000/api/chi-tiet-ve/data")
+            baseRequest
+                .get("chi-tiet-ve/data")
                 .then((res) => {
                     this.list_chi_tiet_ve = res.data.data;
                 })
         },
         xoa() {
-            axios
-                .delete("http://127.0.0.1:8000/api/chi-tiet-ve/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("chi-tiet-ve/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -207,8 +208,8 @@ export default {
                 });
         },
         capNhat() {
-            axios
-                .put("http://127.0.0.1:8000/api/chi-tiet-ve/update", this.chi_tiet_ve_update)
+            baseRequest
+                .put("chi-tiet-ve/update", this.chi_tiet_ve_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -219,8 +220,8 @@ export default {
                 });
         },
         themMoi() {
-            axios
-                .post("http://127.0.0.1:8000/api/chi-tiet-ve/create", this.chi_tiet_ve_create)
+            baseRequest
+                .post("chi-tiet-ve/create", this.chi_tiet_ve_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
