@@ -100,12 +100,14 @@
                                         <td>{{ v.ten_dich_vu }}</td>
                                         <td>{{ v.gia_tien }}</td>
                                         <td class="text-center">
-                                            <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang" class="btn btn-success">Hoạt động</button>
-                                            <button v-on:click="doiTrangThai(v)" v-else class="btn btn-primary">Tạm dừng</button>
+                                            <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang"
+                                                class="btn btn-success">Hoạt động</button>
+                                            <button v-on:click="doiTrangThai(v)" v-else class="btn btn-primary">Tạm
+                                                dừng</button>
                                         </td>
                                         <td class="text-center">
-                                            <button v-on:click="Object.assign(dich_vu_update, v)" data-bs-toggle="modal" data-bs-target="#updateModal"
-                                                class="btn btn-info">Cập nhật</button>
+                                            <button v-on:click="Object.assign(dich_vu_update, v)" data-bs-toggle="modal"
+                                                data-bs-target="#updateModal" class="btn btn-info">Cập nhật</button>
                                             <button v-on:click="id_can_xoa = v.id" data-bs-toggle="modal"
                                                 data-bs-target="#deleteModal" class="btn btn-danger ms-2">Xoá</button>
                                         </td>
@@ -179,7 +181,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button v-on:click="xoaDichVu()" type="button" data-bs-dismiss="modal" class="btn btn-primary">Save</button>
+                    <button v-on:click="xoaDichVu()" type="button" data-bs-dismiss="modal"
+                        class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
@@ -189,6 +192,7 @@
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -203,16 +207,16 @@ export default {
     },
     methods: {
         layDichVu() {
-            axios
-                .get("http://127.0.0.1:8000/api/dich-vu/data")
+            baseRequest
+                .get("dich-vu/data")
                 .then((res) => {
                     this.danh_sach_dich_vu = res.data.data;
                     console.log(this.danh_sach_dich_vu);
                 });
         },
         themDichVu() {
-            axios
-                .post('http://127.0.0.1:8000/api/dich-vu/create', this.dich_vu_create)
+            baseRequest
+                .post('dich-vu/create', this.dich_vu_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -221,8 +225,8 @@ export default {
                 });
         },
         xoaDichVu() {
-            axios
-                .delete("http://127.0.0.1:8000/api/dich-vu/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("dich-vu/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -231,8 +235,8 @@ export default {
                 });
         },
         capNhatDichVu() {
-            axios
-                .put("http://127.0.0.1:8000/api/dich-vu/update", this.dich_vu_update)
+            baseRequest
+                .put("dich-vu/update", this.dich_vu_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -241,8 +245,8 @@ export default {
                 });
         },
         doiTrangThai(xxx) {
-            axios
-                .put('http://127.0.0.1:8000/api/dich-vu/doi-trang-thai', xxx)
+            baseRequest
+                .put('dich-vu/doi-trang-thai', xxx)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)

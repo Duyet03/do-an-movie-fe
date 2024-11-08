@@ -153,6 +153,7 @@
 import axios from 'axios';
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -168,22 +169,22 @@ export default {
     },
     methods: {
         loadDataTheLoai() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/the-loai-phim/lay-du-lieu')
+            baseRequest
+                .get('admin/the-loai-phim/lay-du-lieu')
                 .then((res) => {
                     this.list_the_loai = res.data.the_loai;
                 });
         },
         searchTheLoai() {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/the-loai-phim/search', this.key_search)
+            baseRequest
+                .post('admin/the-loai-phim/search', this.key_search)
                 .then((res) => {
                     this.list_the_loai = res.data.the_loai;
                 });
         },
         createTheLoai() {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/the-loai-phim/create', this.create_the_loai)
+            baseRequest
+                .post('admin/the-loai-phim/create', this.create_the_loai)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success('Thông báo<br>' + res.data.message);
@@ -200,8 +201,8 @@ export default {
                 });
         },
         deleteTheLoai() {
-            axios
-                .delete('http://127.0.0.1:8000/api/admin/the-loai-phim/delete/' + this.delete_the_loai)
+            baseRequest
+                .delete('admin/the-loai-phim/delete/' + this.delete_the_loai)
                 .then((res) => {
                     console.log(res.data.status);
                     if (res.data.status == 1) {
@@ -215,8 +216,8 @@ export default {
         },
         updateTheLoai() {
 
-            axios
-                .put('http://127.0.0.1:8000/api/admin/the-loai-phim/update', this.edit_the_loai)
+            baseRequest
+                .put('admin/the-loai-phim/update', this.edit_the_loai)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success('Thông báo<br>' + res.data.message);

@@ -336,6 +336,7 @@
 import axios from 'axios'
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
 
 
@@ -353,22 +354,22 @@ export default {
     },
     methods: {
         loadDataQuanLyPhim() {
-            axios
-                .get('http://127.0.0.1:8000/api/admin/quan-ly-phim/lay-du-lieu')
+            baseRequest
+                .get('admin/quan-ly-phim/lay-du-lieu')
                 .then((res) => {
                     this.list_quan_ly_phim = res.data.quan_ly_phim;
                 });
         },
         searchQuanLyPhim() {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/quan-ly-phim/tim-quan-ly-phim', this.key_search)
+            baseRequest
+                .post('admin/quan-ly-phim/tim-quan-ly-phim', this.key_search)
                 .then((res) => {
                     this.list_quan_ly_phim = res.data.quan_ly_phim;
                 });
         },
         createQuanLyPhim() {
-            axios
-                .post('http://127.0.0.1:8000/api/admin/quan-ly-phim/them-moi-quan-ly-phim', this.create_quan_ly_phim)
+            baseRequest
+                .post('admin/quan-ly-phim/them-moi-quan-ly-phim', this.create_quan_ly_phim)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success('Thông báo<br>' + res.data.message);
@@ -385,8 +386,8 @@ export default {
                 });
         },
         deleteQuanLyPhim() {
-            axios
-                .delete('http://127.0.0.1:8000/api/admin/quan-ly-phim/xoa-quan-ly-phim/' + this.delete_quan_ly_phim)
+            baseRequest
+                .delete('admin/quan-ly-phim/xoa-quan-ly-phim/' + this.delete_quan_ly_phim)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success('Thông báo<br>' + res.data.message);
@@ -404,8 +405,8 @@ export default {
                 });
         },
         doiTrangThai(xyz) {
-            axios
-                .put('http://127.0.0.1:8000/api/admin/quan-ly-phim/doi-trang-thai', xyz)
+            baseRequest
+                .put('admin/quan-ly-phim/doi-trang-thai', xyz)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success('Thông báo<br>' + res.data.message);
@@ -424,8 +425,8 @@ export default {
 
         updateQuanLyPhim() {
 
-            axios
-                .put('http://127.0.0.1:8000/api/admin/quan-ly-phim/update', this.edit_quan_ly_phim)
+            baseRequest
+                .put('admin/quan-ly-phim/update', this.edit_quan_ly_phim)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success('Thông báo<br>' + res.data.message);

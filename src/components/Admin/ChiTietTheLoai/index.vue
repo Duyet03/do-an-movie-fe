@@ -50,7 +50,8 @@
                                                     v-on:click="Object.assign(chi_tiet_the_loai_update, v)"
                                                     class="btn btn-primary">Cập nhật</button>
                                                 <button data-bs-toggle="modal" data-bs-target="#xoa"
-                                                    v-on:click="id_can_xoa = v.id" class="btn btn-danger ms-1">Xoá</button>
+                                                    v-on:click="id_can_xoa = v.id"
+                                                    class="btn btn-danger ms-1">Xoá</button>
                                             </td>
                                         </tr>
                                     </template>
@@ -113,6 +114,7 @@
 import { createToaster } from "@meforma/vue-toaster";
 import axios from "axios";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -130,15 +132,15 @@ export default {
             return new Intl.NumberFormat('vi-VI', { style: 'currency', currency: 'VND' }).format(number);
         },
         loadData() {
-            axios
-                .get("http://127.0.0.1:8000/api/chi-tiet-the-loai/data")
+            baseRequest
+                .get("chi-tiet-the-loai/data")
                 .then((res) => {
                     this.list_chi_tiet_the_loai = res.data.data;
                 })
         },
         xoa() {
-            axios
-                .delete("http://127.0.0.1:8000/api/chi-tiet-the-loai/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("chi-tiet-the-loai/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -152,8 +154,8 @@ export default {
                 });
         },
         capNhat() {
-            axios
-                .put("http://127.0.0.1:8000/api/chi-tiet-the-loai/update", this.chi_tiet_the_loai_update)
+            baseRequest
+                .put("chi-tiet-the-loai/update", this.chi_tiet_the_loai_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -164,8 +166,8 @@ export default {
                 });
         },
         themMoi() {
-            axios
-                .post("http://127.0.0.1:8000/api/chi-tiet-the-loai/create", this.chi_tiet_the_loai_create)
+            baseRequest
+                .post("chi-tiet-the-loai/create", this.chi_tiet_the_loai_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)

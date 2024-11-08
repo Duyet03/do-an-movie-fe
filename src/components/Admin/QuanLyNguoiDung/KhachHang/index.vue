@@ -142,15 +142,18 @@
                                         <td>{{ v.is_block }}</td>
                                         <td>{{ v.is_active }}</td>
                                         <td class="text-center">
-                                            <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang==1" class="btn btn-success">Hoạt động</button>
-                                            <button v-on:click="doiTrangThai(v)" v-else class="btn btn-primary">Tạm dừng</button>
+                                            <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang == 1"
+                                                class="btn btn-success">Hoạt động</button>
+                                            <button v-on:click="doiTrangThai(v)" v-else class="btn btn-primary">Tạm
+                                                dừng</button>
                                         </td>
                                         <td>{{ v.id_chuc_nang }}</td>
                                         <td class="text-center">
-                                            <button v-on:click="Object.assign(khach_hang_update, v)" data-bs-toggle="modal" data-bs-target="#updateModal"
+                                            <button v-on:click="Object.assign(khach_hang_update, v)"
+                                                data-bs-toggle="modal" data-bs-target="#updateModal"
                                                 class="btn btn-info">Cập nhật</button>
-                                            <button v-on:click="id_can_xoa = v.id" data-bs-toggle="modal" data-bs-target="#deleteModal"
-                                                class="btn btn-danger ms-2">Xoá</button>
+                                            <button v-on:click="id_can_xoa = v.id" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" class="btn btn-danger ms-2">Xoá</button>
                                         </td>
                                     </tr>
                                 </template>
@@ -234,14 +237,14 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button v-on:click="capNhatKhachHang()" data-bs-dismiss="modal" class="btn btn-primary">Save</button>
+                    <button v-on:click="capNhatKhachHang()" data-bs-dismiss="modal"
+                        class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- delete Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -265,6 +268,7 @@
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -279,16 +283,16 @@ export default {
     },
     methods: {
         layKhachHang() {
-            axios
-                .get("http://127.0.0.1:8000/api/khach-hang/data")
+            baseRequest
+                .get("khach-hang/data")
                 .then((res) => {
                     this.danh_sach_khach_hang = res.data.data;
                     console.log(this.danh_sach_khach_hang);
                 });
         },
         themKhachHang() {
-            axios
-                .post('http://127.0.0.1:8000/api/khach-hang/create', this.khach_hang_create)
+            baseRequest
+                .post('khach-hang/create', this.khach_hang_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -297,8 +301,8 @@ export default {
                 });
         },
         xoaKhachHang() {
-            axios
-                .delete("http://127.0.0.1:8000/api/khach-hang/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("khach-hang/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -307,8 +311,8 @@ export default {
                 });
         },
         capNhatKhachHang() {
-            axios
-                .put("http://127.0.0.1:8000/api/khach-hang/update", this.khach_hang_update)
+            baseRequest
+                .put("khach-hang/update", this.khach_hang_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -317,8 +321,8 @@ export default {
                 });
         },
         doiTrangThai(xxx) {
-            axios
-                .put('http://127.0.0.1:8000/api/khach-hang/doi-trang-thai', xxx)
+            baseRequest
+                .put('khach-hang/doi-trang-thai', xxx)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
