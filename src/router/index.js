@@ -29,39 +29,10 @@ const routes = [
         meta: { layout: 'client' }
     },
     {
-        path: '/view-sp1',
-        component: () => import('../components/Client/viewSanPham1.vue'),
-        meta: { layout: 'client' }
-    },
-    {
-        path: '/view-sp3',
-        component: () => import('../components/Client/viewSanPham3.vue'),
-        meta: { layout: 'client' }
-    },
-    {
-        path: '/view-sp4',
-        component: () => import('../components/Client/viewSanPham4.vue'),
-        meta: { layout: 'client' }
-    },
-    {
-        path: '/view-sp5',
-        component: () => import('../components/Client/viewSanPham5.vue'),
-        meta: { layout: 'client' }
-    },
-    {
-        path: '/view-sp6',
-        component: () => import('../components/Client/viewSanPham6.vue'),
-        meta: { layout: 'client' }
-    },
-    {
-        path: '/view-sp7',
-        component: () => import('../components/Client/viewSanPham7.vue'),
-        meta: { layout: 'client' }
-    },
-    {
-        path: '/view-sp8',
-        component: () => import('../components/Client/viewSanPham8.vue'),
-        meta: { layout: 'client' }
+        path : '/chi-tiet-phim/:id_phim',
+        component: ()=>import('../components/Client/ChiTietPhim/index.vue'),
+        meta : {layout : 'client'},
+        props: true
     },
     {
         path: '/dat-cho',
@@ -125,7 +96,7 @@ const routes = [
     },
     {
         path: '/admin/noi-dung',
-        component: () => import('../components/admin/QuanLyNoiDung/index.vue'),
+        component: () => import('../components/Admin/QuanLyNoiDung/index.vue'),
         beforeEnter: kiemTraAdmin,
     },
     {
@@ -136,12 +107,12 @@ const routes = [
 
     {
         path: '/admin/phim',
-        component: () => import('../components/admin/QuanLyPhim/index.vue'),
+        component: () => import('../components/Admin/QuanLyPhim/index.vue'),
         beforeEnter: kiemTraAdmin,
     },
     {
         path: '/admin/phong',
-        component: () => import('../components/admin/QuanLyPhong/index.vue'),
+        component: () => import('../components/Admin/QuanLyPhong/index.vue'),
         beforeEnter: kiemTraAdmin,
     },
     {
