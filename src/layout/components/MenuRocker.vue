@@ -2,7 +2,7 @@
   <div class="nav-container primary-menu">
     <div class="mobile-topbar-header">
       <div>
-        <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+        <img src="../../assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
       </div>
       <div>
         <h4 class="logo-text">Rukada</h4>
@@ -195,6 +195,15 @@
               <div class="parent-icon"><i class="fa-solid fa-video"></i>
               </div>
               <div class="menu-title">Thể Loại</div>
+            </a>
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/admin/phan-quyen">
+            <a class="nav-link" href="/admin/phan-quyen">
+              <div class="parent-icon"><i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="menu-title">Phân Quyền</div>
             </a>
           </router-link>
         </li>

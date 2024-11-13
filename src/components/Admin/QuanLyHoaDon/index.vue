@@ -22,7 +22,8 @@
                         </select>
                     </div>
                     <div class="card-footer text-end">
-                        <button v-on:click="themMoiHoaDon()" style="width: 100px;" class="btn btn-outline-primary">Tạo</button>
+                        <button v-on:click="themMoiHoaDon()" style="width: 100px;"
+                            class="btn btn-outline-primary">Tạo</button>
                     </div>
                 </div>
             </div>
@@ -59,10 +60,11 @@
                                                 <button v-else class="btn btn-warning">Chưa thanh toán</button>
                                             </td>
                                             <td class="text-center align-middle text-nowrap">
-                                                <button v-on:click="Object.assign(hoa_don_update, v)" class="btn btn-primary" data-bs-toggle="modal"
+                                                <button v-on:click="Object.assign(hoa_don_update, v)"
+                                                    class="btn btn-primary" data-bs-toggle="modal"
                                                     data-bs-target="#cap_nhat">Cập nhật</button>
-                                                <button v-on:click="id_can_xoa=v.id" class="btn btn-danger ms-1" data-bs-toggle="modal"
-                                                    data-bs-target="#xoa">Xoá</button>
+                                                <button v-on:click="id_can_xoa = v.id" class="btn btn-danger ms-1"
+                                                    data-bs-toggle="modal" data-bs-target="#xoa">Xoá</button>
                                             </td>
                                         </tr>
                                     </template>
@@ -98,7 +100,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button v-on:click="capNhatHoaDon()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Cập nhật</button>
+                        <button v-on:click="capNhatHoaDon()" type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal">Cập
+                            nhật</button>
                     </div>
                 </div>
             </div>
@@ -118,7 +122,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button v-on:click="xoaHoaDon()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Xoá</button>
+                        <button v-on:click="xoaHoaDon()" type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal">Xoá</button>
                     </div>
                 </div>
             </div>
@@ -129,6 +134,7 @@
 import { createToaster } from "@meforma/vue-toaster";
 import axios from "axios";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -146,21 +152,21 @@ export default {
             return new Intl.NumberFormat('vi-VI', { style: 'currency', currency: 'VND' }).format(number);
         },
         loadData() {
-            axios
-                .get("http://127.0.0.1:8000/api/hoa-don/data")
+            baseRequest
+                .get("hoa-don/data")
                 .then((res) => {
                     this.list_hoa_don = res.data.hoa_don;
                 })
         },
         xoaHoaDon() {
-            axios
-                .delete("http://127.0.0.1:8000/api/hoa-don/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("hoa-don/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
                         this.loadData();
                         console.log(this.id_can_xoa);
-                        
+
                     } else {
                         toaster.error(res.data.message);
                         console.log(this.id_can_xoa);
@@ -168,8 +174,8 @@ export default {
                 });
         },
         capNhatHoaDon() {
-            axios
-                .put("http://127.0.0.1:8000/api/hoa-don/update", this.hoa_don_update)
+            baseRequest
+                .put("hoa-don/update", this.hoa_don_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -180,8 +186,8 @@ export default {
                 });
         },
         themMoiHoaDon() {
-            axios
-                .post("http://127.0.0.1:8000/api/hoa-don/create", this.hoa_don_create)
+            baseRequest
+                .post("hoa-don/create", this.hoa_don_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)

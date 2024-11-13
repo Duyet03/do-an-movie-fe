@@ -91,12 +91,14 @@
                                         <td>{{ v.id_chuc_vu }}</td>
                                         <td>{{ v.ten_chuc_vu }}</td>
                                         <td class="text-center">
-                                            <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang" class="btn btn-success">Hoạt động</button>
-                                            <button v-on:click="doiTrangThai(v)" v-else class="btn btn-primary">Tạm dừng</button>
+                                            <button v-on:click="doiTrangThai(v)" v-if="v.tinh_trang"
+                                                class="btn btn-success">Hoạt động</button>
+                                            <button v-on:click="doiTrangThai(v)" v-else class="btn btn-primary">Tạm
+                                                dừng</button>
                                         </td>
                                         <td class="text-center">
-                                            <button v-on:click="Object.assign(chuc_vu_update, v)" data-bs-toggle="modal" data-bs-target="#updateModal"
-                                                class="btn btn-info">Cập nhật</button>
+                                            <button v-on:click="Object.assign(chuc_vu_update, v)" data-bs-toggle="modal"
+                                                data-bs-target="#updateModal" class="btn btn-info">Cập nhật</button>
                                             <button v-on:click="id_can_xoa = v.id" data-bs-toggle="modal"
                                                 data-bs-target="#deleteModal" class="btn btn-danger ms-2">Xoá</button>
                                         </td>
@@ -174,6 +176,7 @@
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -188,16 +191,16 @@ export default {
     },
     methods: {
         layChucVu() {
-            axios
-                .get("http://127.0.0.1:8000/api/chuc-vu/data")
+            baseRequest
+                .get("chuc-vu/data")
                 .then((res) => {
                     this.danh_sach_chuc_vu = res.data.data;
                     console.log(this.danh_sach_chuc_vu);
                 });
         },
         themChucVu() {
-            axios
-                .post('http://127.0.0.1:8000/api/chuc-vu/create', this.chuc_vu_create)
+            baseRequest
+                .post('chuc-vu/create', this.chuc_vu_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -206,8 +209,8 @@ export default {
                 });
         },
         xoaChucVu() {
-            axios
-                .delete("http://127.0.0.1:8000/api/chuc-vu/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("chuc-vu/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -216,8 +219,8 @@ export default {
                 });
         },
         capNhatChucVu() {
-            axios
-                .put("http://127.0.0.1:8000/api/chuc-vu/update", this.chuc_vu_update)
+            baseRequest
+                .put("chuc-vu/update", this.chuc_vu_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -226,8 +229,8 @@ export default {
                 });
         },
         doiTrangThai(xxx) {
-            axios
-                .put('http://127.0.0.1:8000/api/chuc-vu/doi-trang-thai', xxx)
+            baseRequest
+                .put('chuc-vu/doi-trang-thai', xxx)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
