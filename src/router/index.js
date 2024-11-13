@@ -23,7 +23,6 @@ const routes = [
         component: () => import('../components/Client/home.vue'),
         meta: { layout: 'client' }
     },
-   
     {
         path : '/chi-tiet-phim/:id_phim',
         component: ()=>import('../components/Client/ChiTietPhim/index.vue'),
@@ -32,7 +31,7 @@ const routes = [
     },
     {
         path: '/dat-cho',
-        component: () => import('../components/Client/datCho.vue'),
+        component: () => import('../components/Client/datSuat.vue'),
         meta: { layout: 'client' }
     },
     {

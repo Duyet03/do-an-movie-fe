@@ -1,107 +1,199 @@
 <template>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-5 col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>How would you like to pay?</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <div class="card-body"><img class="img-fluid"
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1v7T287-ikP1m7dEUbs2n1SbbLEqkMd1ZA&s"
-                                            alt=""></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 ">
-                                <div class="card">
-                                    <div class="card-bod">
-                                        <img class="img-fluid" style=""
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnV4cUM7jBauINof35Yn_unOz976Iz5okV8A&s"
-                                            alt="">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <p>Đặt hàng / Thanh toán</p>
+
+                </h4>
+
+                <hr>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Dịch vụ đi kèm
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample" style="">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <img class="img-fluid"
+                                                    src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                <h5>[B]Harmory Couple</h5>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <div class="card-bod">
-                                        <img class="img-fluid" style=""
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxsoe7iPccCnGraliGFCLCvbg3bO3PDtELQ&s"
-                                            alt="">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <img class="img-fluid"
+                                                    src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                <h5>[B]Harmory Couple</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <img class="img-fluid"
+                                                    src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                <h5>[B]Harmory Couple</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <img class="img-fluid"
+                                                    src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                <h5>[B]Harmory Couple</h5>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Khuyến mãi
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <div class="card text-center" style="background-color: darkgrey;">
+                                            <div class="card-header"><b>Phiếu giảm giá</b></div>
+                                            <div class="card-body">
+                                                <h4>GIẢM</h4>
+                                                <h4>50%</h4>
+                                            </div>
+                                            <div class="card-footer">
+                                                <p>Phân phối bởi Lotte</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <h4>
+                                    <p>Thanh toán</p>
+                                </h4>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <b>Vui lòng chọn phương thức thanh toán</b>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row product-grid">
+                                                    <div class="col-lg-4">
+                                                        <div class="card">
+                                                            <div class="card-body"><img class="img-fluid"
+                                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1v7T287-ikP1m7dEUbs2n1SbbLEqkMd1ZA&s"
+                                                                    alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 ">
+                                                        <div class="card">
+                                                            <div class="card-bod">
+                                                                <img class="img-fluid" style=""
+                                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnV4cUM7jBauINof35Yn_unOz976Iz5okV8A&s"
+                                                                    alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="card">
+                                                            <div class="card-bod">
+                                                                <img class="img-fluid" style=""
+                                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxsoe7iPccCnGraliGFCLCvbg3bO3PDtELQ&s"
+                                                                    alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <b>Thông tin thanh toán</b>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <template v-for="(value, index) in list_phim" :key="index">
+                                                        <div class="col-md-3">
+                                                            <div class="card-body">
+                                                                <img :src="value.img"
+                                                                    class="img-fluid rounded-start ms-2" alt="..."
+                                                                    style="width: 90px; height: 130px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="card-body">
+                                                                <b class="card-title"> NAME : {{
+                                                                    value.name }}
+                                                                </b>
+                                                                <p class="card-text"><b>RANK : </b>{{
+                                                                    value.xep_hang }}</p>
+                                                                <p class="card-text"><b>NGÀY : </b>{{ value.ngay
+                                                                    }}</p>
+                                                                <p class="card-text"><b>THỂ LOẠI : </b>{{
+                                                                    value.loai }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background-color: pink;" class="d-flex justify-content-around">
+                        <h5 class="m-3">Tổng số tiền đặt hàng</h5>
+                        <h5 class="m-3"><b>280.000 vnd</b></h5>
                     </div>
                 </div>
             </div>
-            <template v-for="(value, index) in list_phim" :key="index">
-                <div class="col-lg-7 col-md-12">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <h3>Thanh Toán</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <h4>
-                                        <p>Phim</p>
-                                    </h4>
-                                    <h4>
-                                        <p>Ghế h4,h5</p>
-                                    </h4>
-                                    <h4>
-                                        <p class="text-nowrap">Dịch vụ ghế đôi</p>
-                                    </h4>
-                                </div>
-                                <div class="col-lg-2">
-                                    <h4>
-                                        <p>:</p>
-                                    </h4>
-                                    <h4>
-                                        <p>:</p>
-                                    </h4>
-                                    <h4>
-                                        <p>:</p>
-                                    </h4>
-                                </div>
-                                <div class="col-lg-6  mb-5">
-                                    <h4>
-                                        <p class="text-nowrap">{{ value.name }}</p>
-                                    </h4>
-                                    <h4>
-                                        <p>160.000đ</p>
-                                    </h4>
-                                    <h4>
-                                        <p>120.000đ</p>
-                                    </h4>
-                                </div>
-                                <hr>
-                                <div class="col-lg-4">
-                                    <h4>
-                                        <p>Tổng</p>
-                                    </h4>
-                                </div>
-                                <div class="col-lg-2">
-                                    <h4>
-                                        <p>:</p>
-                                    </h4>
-                                </div>
-                                <div class="col-lg-6 text-end">
-                                    <h4>
-                                        <p>280.000đ</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-end">
-                            <button class="btn btn-primary">Thanh toán</button>
-                        </div>
-                    </div>
-                </div>
-            </template>
+            <div class="card-footer text-end">
+                <button class="btn btn-danger">Xác nhận thanh toán</button>
+            </div>
         </div>
     </div>
 
@@ -224,4 +316,3 @@ export default {
     }
 }
 </script>
-<style></style>
