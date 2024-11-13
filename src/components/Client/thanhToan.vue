@@ -2,11 +2,10 @@
     <div class="container mt-5">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">
-                    <h4>
-                        <p>Đặt hàng / Thanh toán</p>
-                    </h4>
-                </h5>
+                <h4 class="card-title">
+                    <p>Đặt hàng / Thanh toán</p>
+
+                </h4>
 
                 <hr>
                 <div class="accordion" id="accordionExample">
@@ -26,7 +25,7 @@
                                             <div class="card-body text-center">
                                                 <img class="img-fluid"
                                                     src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
-                                                    alt="">                                               
+                                                    alt="">
                                             </div>
                                             <div class="card-footer text-center">
                                                 <h5>[B]Harmory Couple</h5>
@@ -38,7 +37,7 @@
                                             <div class="card-body text-center">
                                                 <img class="img-fluid"
                                                     src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
-                                                    alt="">                                               
+                                                    alt="">
                                             </div>
                                             <div class="card-footer text-center">
                                                 <h5>[B]Harmory Couple</h5>
@@ -50,7 +49,7 @@
                                             <div class="card-body text-center">
                                                 <img class="img-fluid"
                                                     src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
-                                                    alt="">                                               
+                                                    alt="">
                                             </div>
                                             <div class="card-footer text-center">
                                                 <h5>[B]Harmory Couple</h5>
@@ -62,7 +61,7 @@
                                             <div class="card-body text-center">
                                                 <img class="img-fluid"
                                                     src="http://media.lottecinemavn.com/Media/WebAdmin/ec11397f97114de5bf16dd3b7a86ea45.png"
-                                                    alt="">                                               
+                                                    alt="">
                                             </div>
                                             <div class="card-footer text-center">
                                                 <h5>[B]Harmory Couple</h5>
