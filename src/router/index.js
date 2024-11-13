@@ -36,7 +36,7 @@ const routes = [
     },
     {
         path: '/dat-cho',
-        component: () => import('../components/Client/datCho.vue'),
+        component: () => import('../components/Client/datSuat.vue'),
         meta: { layout: 'client' }
     },
     {
