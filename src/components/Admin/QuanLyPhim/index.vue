@@ -32,6 +32,11 @@
                                                     class="form-control mb-3" placeholder="Nhập tên phim">
                                             </div>
                                             <div class="col-6">
+                                                <label class="form-label">Slug phim</label>
+                                                <input v-model="create_quan_ly_phim.slug_phim" type="text"
+                                                    class="form-control mb-3" placeholder="Nhập tên phim">
+                                            </div>
+                                            <div class="col-6">
                                                 <label class="form-label">Ngày Chiếu</label>
                                                 <input v-model="create_quan_ly_phim.ngay_chieu" type="date"
                                                     class="form-control mb-3" placeholder="Ngày Chiếu">
@@ -126,6 +131,11 @@
                                             <div class="col-6">
                                                 <label class="form-label">Tên Phim</label>
                                                 <input v-model="edit_quan_ly_phim.ten_phim" type="text"
+                                                    class="form-control mb-3" placeholder="Nhập tên phim">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">Slug Phim</label>
+                                                <input v-model="edit_quan_ly_phim.slug_phim" type="text"
                                                     class="form-control mb-3" placeholder="Nhập tên phim">
                                             </div>
                                             <div class="col-6">
@@ -227,6 +237,7 @@
                             <tr class="text-center align-middle">
                                 <th>#</th>
                                 <th>Tên Phim</th>
+                                <th>Slug phim</th>
                                 <th>Ngày Chiếu</th>
                                 <th>Thời Lượng</th>
                                 <th>Đạo Diễn</th>
@@ -247,6 +258,9 @@
                                     {{ k + 1 }}</td>
                                 <td class="text-center align-middle text-nowrap">
                                     {{ v.ten_phim }}
+                                </td>
+                                <td class="text-center align-middle text-nowrap">
+                                    {{ v.slug_phim }}
                                 </td>
                                 <td class="text-center align-middle text-nowrap">
                                     {{ v.ngay_chieu }}

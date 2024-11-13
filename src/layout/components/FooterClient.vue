@@ -4,7 +4,7 @@
             <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
                 <div class="carousel-inner">
                     <template v-for="(v, k) in ds_slide" :key="k">
-                        <template v-if="k == 0">
+                        <template v-if="v.tinh_trang == 1">
                             <div class="carousel-item active">
                                 <img v-bind:src="v.link_hinh_anh" class="d-block w-100" alt="...">
                             </div>
@@ -82,14 +82,14 @@ export default {
     methods: {
         layDuLieuReview() {
             axios
-                .get('review/data')
+                .get('http://127.0.0.1:8000/api/review/data')
                 .then((res) => {
                     this.ds_review = res.data.review;
                 })
         },
         layDuLieuSlide() {
             axios
-                .get('slide/data')
+                .get('http://127.0.0.1:8000/api/slide/data')
                 .then((res) => {
                     this.ds_slide = res.data.slide;
                 })
