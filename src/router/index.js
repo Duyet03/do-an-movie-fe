@@ -135,7 +135,6 @@ const routes = [
     {
         path: '/admin/phim',
         component: () => import('../components/admin/QuanLyPhim/index.vue'),
-
     },
     {
         path: '/admin/phong',
