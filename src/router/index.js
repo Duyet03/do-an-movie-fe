@@ -23,11 +23,7 @@ const routes = [
         component: () => import('../components/Client/home.vue'),
         meta: { layout: 'client' }
     },
-    {
-        path: '/view-sp2',
-        component: () => import('../components/Client/viewSanPham2.vue'),
-        meta: { layout: 'client' }
-    },
+   
     {
         path : '/chi-tiet-phim/:id_phim',
         component: ()=>import('../components/Client/ChiTietPhim/index.vue'),
