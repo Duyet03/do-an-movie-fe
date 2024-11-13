@@ -116,7 +116,9 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="card-footer mt-2 mb-2 text-end">
-                            <button class="btn btn-danger ">Đặt vé ngay</button>
+                            <router-link to="/dat-cho">
+                                <button class="btn btn-danger ">Đặt vé ngay</button>
+                            </router-link>
                         </div>
                     </div>
                 </div>
