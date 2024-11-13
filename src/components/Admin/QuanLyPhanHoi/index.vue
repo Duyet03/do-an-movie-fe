@@ -109,7 +109,8 @@
                                         <td>{{ v.sao_danh_gia }}</td>
                                         <td>{{ v.noi_dung }}</td>
                                         <td class="text-center">
-                                            <button v-on:click="Object.assign(danh_gia_update, v)" data-bs-toggle="modal" data-bs-target="#updateModal"
+                                            <button v-on:click="Object.assign(danh_gia_update, v)"
+                                                data-bs-toggle="modal" data-bs-target="#updateModal"
                                                 class="btn btn-info">Cập nhật</button>
                                             <button v-on:click="id_can_xoa = v.id" data-bs-toggle="modal"
                                                 data-bs-target="#deleteModal" class="btn btn-danger ms-2">Xoá</button>
@@ -148,15 +149,13 @@
                         <div class="col-lg-6">
                             <div class="mb-2 mt-2">
                                 <label>Id khách hàng</label>
-                                <input v-model="danh_gia_update.id_khach_hang" type="text"
-                                    class="form-control mt-2" />
+                                <input v-model="danh_gia_update.id_khach_hang" type="text" class="form-control mt-2" />
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="mb-2 mt-2">
                                 <label>Sao đánh giá</label>
-                                <input v-model="danh_gia_update.sao_danh_gia" type="text"
-                                    class="form-control mt-2" />
+                                <input v-model="danh_gia_update.sao_danh_gia" type="text" class="form-control mt-2" />
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -164,7 +163,7 @@
                                 <label>Nội dung</label>
                                 <textarea v-model="danh_gia_update.noi_dung" type="text" class="form-control mt-2"
                                     rows="5">
-                                </textarea>
+                            </textarea>
                             </div>
                         </div>
                     </div>
@@ -201,6 +200,7 @@
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
+import baseRequest from '../../../core/baseRequest';
 export default {
     data() {
         return {
@@ -215,16 +215,16 @@ export default {
     },
     methods: {
         layDanhGia() {
-            axios
-                .get("http://127.0.0.1:8000/api/danh-gia/data")
+            baseRequest
+                .get("danh-gia/data")
                 .then((res) => {
                     this.danh_sach_danh_gia = res.data.data;
                     console.log(this.danh_sach_danh_gia);
                 });
         },
         themDanhGia() {
-            axios
-                .post('http://127.0.0.1:8000/api/danh-gia/create', this.danh_gia_create)
+            baseRequest
+                .post('danh-gia/create', this.danh_gia_create)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -233,8 +233,8 @@ export default {
                 });
         },
         xoaDanhGia() {
-            axios
-                .delete("http://127.0.0.1:8000/api/danh-gia/delete/" + this.id_can_xoa)
+            baseRequest
+                .delete("danh-gia/delete/" + this.id_can_xoa)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -243,8 +243,8 @@ export default {
                 });
         },
         capNhatDanhGia() {
-            axios
-                .put("http://127.0.0.1:8000/api/danh-gia/update", this.danh_gia_update)
+            baseRequest
+                .put("danh-gia/update", this.danh_gia_update)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)
@@ -255,8 +255,8 @@ export default {
                 });
         },
         doiTrangThai(xxx) {
-            axios
-                .put('http://127.0.0.1:8000/api/danh-gia/doi-trang-thai', xxx)
+            baseRequest
+                .put('danh-gia/doi-trang-thai', xxx)
                 .then((res) => {
                     if (res.data.status == true) {
                         toaster.success(res.data.message)

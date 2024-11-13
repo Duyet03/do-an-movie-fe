@@ -82,14 +82,14 @@ export default {
     methods: {
         layDuLieuReview() {
             axios
-                .get('http://127.0.0.1:8000/api/review/data')
+                .get('review/data')
                 .then((res) => {
                     this.ds_review = res.data.review;
                 })
         },
         layDuLieuSlide() {
             axios
-                .get('http://127.0.0.1:8000/api/slide/data')
+                .get('slide/data')
                 .then((res) => {
                     this.ds_slide = res.data.slide;
                 })
