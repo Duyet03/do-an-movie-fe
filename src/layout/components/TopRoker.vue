@@ -4,7 +4,7 @@
 			<nav class="navbar navbar-expand">
 				<div class="topbar-logo-header">
 					<div class="">
-						<img src="../../assets/images/logo-lotee.png" class="logo-icon" alt="logo icon">
+						<img src="../../assets/images/Lotte__Value_Line__logo.svg.png" class="logo-icon" alt="logo icon">
 					</div>
 					<div class="">
 						<h4 class="logo-text" style="color: crimson;">LOTTE</h4>

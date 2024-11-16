@@ -13,7 +13,11 @@
                      </div>
                      <div class="mt-2">
                          <label for="" class="mb-2">Loại Ghế</label>
-                         <input v-model="create_ghe.loai_ghe" type="text" class="form-control" />
+                         <select v-model="create_ghe.loai_ghe" class="form-control" >
+                            <option value="1">Ghế thường</option>
+                            <option value="0">Ghế đôi </option>
+                         </select>
+                         <!-- <input v-model="create_ghe.loai_ghe" type="text" class="form-control" /> -->
                      </div>
                      <div class="mt-2">
                          <label for="" class="mb-2">Tên Phòng</label>
@@ -29,7 +33,7 @@
                  </div>
                  <div class="card-footer">
                      <div class="text-end">
-                         <button v-on:click="themMoiGhe()" class="btn btn-primary">
+                         <button v-on:click="themMoiGhe()" class="btn btn-primary ">
                              Thêm Mới
                          </button>
                      </div>
@@ -67,15 +71,19 @@
                                  <tr v-for="(v, k) in listGhe" :key="k">
                                      <th class="text-center align-middle">{{ k + 1 }}</th>
                                      <td class="text-center align-middle">{{ v.ten_ghe }}</td>
-                                     <td class="text-center align-middle">{{ v.loai_ghe }}</td>
+                                     <td class="text-center align-middle">
+                                        <button v-if="v.loai_ghe == 1" class="btn btn-light bg-dark  text-warning p-1 w-80" >Ghế thường</button>
+                                        <button v-else class="btn btn-light bg-dark  text-warning p-1 w-80">Ghế Đôi</button>
+                                        <!-- {{ v.loai_ghe }} -->
+                                    </td>
                                      <td class="text-center align-middle">
                                          {{ v.id_phong }}
                                      </td>
                                      <td class="align-middle text-center">
-                                         <button v-if="v.trang_thai == 1" class="btn btn-danger w-50">
+                                         <button v-if="v.trang_thai == 1" class="btn btn-danger w-60">
                                              Hoạt Động
                                          </button>
-                                         <button v-else class="btn btn-primary w-50">
+                                         <button v-else class="btn btn-primary w-60">
                                              Bảo Trì
                                          </button>
                                      </td>
@@ -112,9 +120,16 @@
                                          <label for="">Tên Ghế</label>
                                          <input v-model="update_ghe.ten_ghe" class="form-control mt-2 mb-2" type="text"
                                              name="" id="" />
-                                         <label for="">Loại Ghế</label>
+                                         <!-- <label for="">Loại Ghế</label>
                                          <input v-model="update_ghe.loai_ghe" class="form-control mt-2 mb-2" type="text"
-                                             name="" id="" />
+                                             name="" id="" /> -->
+                                        <div class="class">
+                                        <label for="" class="mb-2">Loại Ghế</label>
+                                        <select v-model="update_ghe.loai_ghe" class="form-control" >
+                                            <option value="1">Ghế thường</option>
+                                            <option value="0">Ghế đôi </option>
+                                        </select>
+                                        </div>
                                          <label for="">Tên Phòng</label>
                                          <input v-model="update_ghe.id_phong" class="form-control mt-2 mb-2" type="text"
                                              name="" id="" />
