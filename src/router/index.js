@@ -26,7 +26,7 @@ const routes = [
     {
         path : '/chi-tiet-phim/:id_phim',
         component: ()=>import('../components/Client/ChiTietPhim/index.vue'),
-        meta : {layout : 'client'},
+        meta : {layout : 'auth'},
         props: true
     },
     {
@@ -96,7 +96,7 @@ const routes = [
     },
     {
         path: '/admin/phan-hoi',
-        component: () => import('../components/admin/QuanLyPhanHoi/index.vue'),
+        component: () => import('../components/Admin/QuanLyPhanHoi/index.vue'),
         beforeEnter: kiemTraAdmin,
     },
 
@@ -118,7 +118,7 @@ const routes = [
     {
         path: '/admin/dang-nhap',
         component: () => import('../components/Admin/DangNhap/index.vue'),
-        meta: { layout: 'auth' }
+        meta: { layout: 'index' }
     },
     {
         path: '/admin/hoa-don',
@@ -145,6 +145,7 @@ const routes = [
         component: () => import('../components/Admin/PhanQuyen/index.vue'),
         beforeEnter: kiemTraAdmin,
     },
+   
 
 ]
 

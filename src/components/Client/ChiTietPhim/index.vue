@@ -7,14 +7,23 @@
                     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img :src="value.slide2" class="d-block w-100" style="height:600px;" alt="...">
+                                <iframe width="560" height="315" class="d-block w-100" style="height:600px;"
+                                    src="https://www.youtube.com/embed/LWkh_hXeEeg?si=eUd_mxvnOCXi9T-G"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item ">
+                                <img :src="phim_chi_tiet.baner1" class="d-block w-100" style="height:600px;" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img :src="value.slide3" class="d-block w-100" style="height:600px;" alt="...">
+                                <img :src="phim_chi_tiet.baner2" class="d-block w-100" style="height:600px;" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img :src="value.slide1" class="d-block w-100" style="height:600px;" alt="...">
+                                <img :src="phim_chi_tiet.baner3" class="d-block w-100" style="height:600px;" alt="...">
                             </div>
+
+
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
                             data-bs-slide="prev">
@@ -38,48 +47,48 @@
                     <div class="carousel-item active">
                         <div class="row mt-2">
                             <div class="col-lg-3">
-                                <img :src="value.slide1" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner1" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-3">
-                                <img :src="value.slide2" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner2" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-3">
-                                <img :src="value.slide3" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner3" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-3">
-                                <img :src="value.slide4" class="img-fluid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row mt-2">
-                            <div class="col-lg-3">
-                                <img :src="value.slide1" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-3">
-                                <img :src="value.slide2" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-3">
-                                <img :src="value.slide3" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-3">
-                                <img :src="value.slide4" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner1" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="row mt-2">
                             <div class="col-lg-3">
-                                <img :src="value.slide1" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner1" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-3">
-                                <img :src="value.slide2" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner2" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-3">
-                                <img :src="value.slide3" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner3" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-3">
-                                <img :src="value.slide4" class="img-fluid" alt="">
+                                <img :src="phim_chi_tiet.baner1" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row mt-2">
+                            <div class="col-lg-3">
+                                <img :src="phim_chi_tiet.baner1" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-3">
+                                <img :src="phim_chi_tiet.baner2" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-3">
+                                <img :src="phim_chi_tiet.baner3" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-3">
+                                <img :src="phim_chi_tiet.baner1" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>

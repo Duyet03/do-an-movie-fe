@@ -80,6 +80,23 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
+                                                <label class="form-label">baner1</label>
+                                                <input v-model="create_quan_ly_phim.baner1" type="text"
+                                                    class="form-control mb-3" placeholder="">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">baner2</label>
+                                                <input v-model="create_quan_ly_phim.baner2" type="text"
+                                                    class="form-control mb-3" placeholder="">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">baner3</label>
+                                                <input v-model="create_quan_ly_phim.baner3" type="text"
+                                                    class="form-control mb-3" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
                                                 <label class="form-label">Mô Tả</label>
                                                 <input v-model="create_quan_ly_phim.mo_ta" type="text"
                                                     class="form-control mb-3" placeholder="">
@@ -182,6 +199,23 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
+                                                <label class="form-label">baner1</label>
+                                                <input v-model="edit_quan_ly_phim.baner1" type="text"
+                                                    class="form-control mb-3" placeholder="">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">baner2</label>
+                                                <input v-model="edit_quan_ly_phim.baner2" type="text"
+                                                    class="form-control mb-3" placeholder="">
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">baner3</label>
+                                                <input v-model="edit_quan_ly_phim.baner3" type="text"
+                                                    class="form-control mb-3" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
                                                 <label class="form-label">Mô Tả</label>
                                                 <input v-model="edit_quan_ly_phim.mo_ta" type="text"
                                                     class="form-control mb-3" placeholder="">
@@ -246,6 +280,9 @@
                                 <th>Thể Loại phim</th>
                                 <th>Giới Hạn Độ Tuổi</th>
                                 <th>Hình Ảnh</th>
+                                <th>baner</th>
+                                <th>baner</th>
+                                <th>baner</th>
                                 <th>Đánh Giá</th>
                                 <th>Mô tả </th>
                                 <th>Tình Trạng</th>
@@ -286,6 +323,16 @@
                                 <td class="text-center align-middle text-nowrap">
                                     <img v-bind:src="v.hinh_anh" alt="" style="height: 50px;">
                                 </td>
+                                <td class="text-center align-middle text-nowrap">
+                                    <img v-bind:src="v.baner1" alt="" style="height: 50px;">
+                                </td>
+                                <td class="text-center align-middle text-nowrap">
+                                    <img v-bind:src="v.baner2" alt="" style="height: 50px;">
+                                </td>
+                                <td class="text-center align-middle text-nowrap">
+                                    <img v-bind:src="v.baner3" alt="" style="height: 50px;">
+                                </td>
+
                                 <td class="text-center align-middle text-nowrap">
                                     {{ v.danh_gia }}</td>
                                 <td class="text-center align-middle text-nowrap">
