@@ -1,3 +1,4 @@
+
 <template>
     <div class="row">
         <div class="col-lg-12">
@@ -335,4 +336,5 @@ export default {
     },
 };
 </script>
+
 <style></style>
